@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>ProcessingPeriod</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2015-11-10 15:30:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CHOICELIST</type>
+	<pattern></pattern>
+
+	<displayNames language="EN">
+		<ns4:value>Processing period</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Délai de traitement</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="60">
+		<displayNames language="FR">
+			<ns4:value>60 jours</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>60 days</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="30">
+		<displayNames language="FR">
+			<ns4:value>30 jours</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>30 days</ns4:value>
+		</displayNames>
+	</allowedValues>
+
+	<searchable>false</searchable>
+
+</TagClass>

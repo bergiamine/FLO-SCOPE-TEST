@@ -1,0 +1,26 @@
+.ESign.component-creation.modal-dialog {
+    width: 400px;
+    max-width: 100%;
+    margin-left: calc(50% - 200px);
+}
+.mobile .ESign.component-creation.modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    height: 50%!important;
+}
+.mobile .ESign.component-creation.modal-dialog .scrollable-body{
+	height: calc(100% - 6rem - 6rem - 2rem)!important;
+}
+
+.ESign.component-creation.modal-dialog #saveAsDraft{
+	display: none;
+}
+
+.ESign .fa-circle:before{
+	color: #2C2 !important;
+}
+.ESign .flower-circle .fa-inverse:before{
+    color: #FFF!important;
+    content: "\f00c";
+}

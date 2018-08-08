@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns22:AccessControlList name="Sécurité pour la configuration" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/search" xmlns:ns4="http://flower.com/docs/domain/taskclass" xmlns:ns3="http://flower.com/docs/domain/file" xmlns:ns6="http://flower.com/docs/domain/component" xmlns:ns20="http://flower.com/docs/domain/virtualFolder" xmlns:ns5="http://flower.com/docs/domain/i18n" xmlns:ns8="http://flower.com/docs/domain/reservation" xmlns:ns7="http://flower.com/docs/domain/task" xmlns:ns13="http://flower.com/docs/domain/tagclass" xmlns:ns9="http://flower.com/docs/domain/scope" xmlns:ns12="http://flower.com/docs/domain/componentclass" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns22="http://flower.com/docs/domain/acl" xmlns:ns10="http://flower.com/docs/domain/workflow" xmlns:ns21="http://flower.com/docs/domain/fact" xmlns:ns17="http://flower.com/docs/domain/documentclass" xmlns:ns16="http://flower.com/docs/domain/folderclass" xmlns:ns15="http://flower.com/docs/domain/security" xmlns:ns14="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns19="http://flower.com/docs/domain/folder" xmlns:ns18="http://flower.com/docs/domain/document">
+    <id>ACL_Configuration</id>
+    <ns22:entries>
+        <ns22:principal>ADMIN</ns22:principal>
+        <ns22:permission>ATTACH</ns22:permission>
+        <ns22:permission>CREATE</ns22:permission>
+        <ns22:permission>CREATE_ANNOTATION</ns22:permission>
+        <ns22:permission>READ</ns22:permission>
+        <ns22:permission>READ_DATA</ns22:permission>
+        <ns22:permission>READ_TAGS</ns22:permission>
+        <ns22:permission>READ_ANNOTATION</ns22:permission>
+        <ns22:permission>READ_CONTENT</ns22:permission>
+        <ns22:permission>DOWNLOAD_CONTENT</ns22:permission>
+        <ns22:permission>UPDATE_CONTENT</ns22:permission>
+        <ns22:permission>READ_HISTORY</ns22:permission>
+        <ns22:grant>ALLOW</ns22:grant>
+    </ns22:entries>
+    <ns22:entries>
+        <ns22:principal>*</ns22:principal>
+        <ns22:permission>READ</ns22:permission>
+        <ns22:permission>READ_CONTENT</ns22:permission>
+        <ns22:grant>ALLOW</ns22:grant>
+    </ns22:entries>
+</ns22:AccessControlList>

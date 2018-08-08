@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Workflow xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/i18n" xmlns:ns4="http://flower.com/docs/domain/acl"
+	xmlns:ns3="http://flower.com/docs/domain/workflow" xmlns:ns6="http://flower.com/docs/domain/file" xmlns:ns20="http://flower.com/docs/domain/virtualFolder"
+	xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns8="http://flower.com/docs/domain/taskclass" xmlns:ns7="http://flower.com/docs/domain/reservation"
+	xmlns:ns13="http://flower.com/docs/domain/fact" xmlns:ns9="http://flower.com/docs/domain/component" xmlns:ns12="http://flower.com/docs/domain/report"
+	xmlns:ns11="http://flower.com/docs/domain/scope" xmlns:ns22="http://flower.com/docs/domain/document" xmlns:ns10="http://flower.com/docs/domain/task"
+	xmlns:ns21="http://flower.com/docs/domain/folder" xmlns:ns17="http://flower.com/docs/domain/security" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass"
+	xmlns:ns15="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/componentclass" xmlns:ns19="http://flower.com/docs/domain/documentclass"
+	xmlns:ns18="http://flower.com/docs/domain/folderclass">
+
+	<id>EEnvelope_Claim</id>
+
+	<ns3:displayNames language="EN">
+		<ns2:value>Claim process</ns2:value>
+	</ns3:displayNames>
+	<ns3:displayNames language="FR">
+		<ns2:value>Demande de réclamation</ns2:value>
+	</ns3:displayNames>
+
+	<ns3:descriptions language="EN">
+		<ns2:value>Process allowing to manage claims of adherent</ns2:value>
+	</ns3:descriptions>
+	<ns3:descriptions language="FR">
+		<ns2:value>Processus permettant de gérer une demande de réclamation d'un adhérent</ns2:value>
+	</ns3:descriptions>
+
+
+	<ns3:style>envelopes</ns3:style>
+	
+	<ns3:startTaskClass>EEnvelope_Claim_Step0_Creation</ns3:startTaskClass>
+	<ns3:taskClasses>EEnvelope_Claim_Step1_Validation</ns3:taskClasses>
+	
+</ns3:Workflow>

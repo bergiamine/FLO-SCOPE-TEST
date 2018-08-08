@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>PoleDirection</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CHOICELIST</type>
+	<pattern />
+
+	<displayNames language="FR">
+		<ns4:value>Pôle / Direction</ns4:value>
+	</displayNames>
+	<displayNames language="EN">
+		<ns4:value>Dpt / Dir board</ns4:value>
+	</displayNames>
+	
+	<allowedValues symbolicName="Pole1">
+		<displayNames language="FR">
+			<ns4:value>DOSMS/Pôle ambulatoire et services aux professionnels de santé</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Dpt 1</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Pole2">
+		<displayNames language="FR">
+			<ns4:value>DOSMS/Pôle Médico Social</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Dpt 2</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Pole3">
+		<displayNames language="FR">
+			<ns4:value>DSP/Pôle Veille et sécurité sanitaire</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Dpt 2</ns4:value>
+		</displayNames>
+	</allowedValues>
+
+	<searchable>false</searchable>
+
+</TagClass>

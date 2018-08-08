@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Scope xmlns:ns2="http://flower.com/docs/domain/i18n" xmlns="http://flower.com/docs/domain/scope" xmlns:ns4="http://flower.com/docs/domain/acl"
+	xmlns:ns3="http://flower.com/docs/domain/common" xmlns:ns5="http://flower.com/docs/domain/component">
+	<ns3:id>Syldavia</ns3:id>
+	<description>Demonstration scope for FlowerDocs features</description>
+	<displayNames language="EN">
+		<ns2:value>Demonstration</ns2:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns2:value>Démonstration</ns2:value>
+	</displayNames>
+	<languages>EN</languages>
+	<languages>FR</languages>
+	<data>
+		<ns3:owner>fadmin</ns3:owner>
+		<ns3:creationDate>2009-03-29 15:46:58.639 +0200</ns3:creationDate>
+		<ns3:lastUpdateDate>2010-12-09 15:46:58.640 +0100</ns3:lastUpdateDate>
+		<ns3:ACL>2b33ca56-3078-11e5-a151-feff819cdc9f</ns3:ACL>
+	</data>
+	<people>
+		<profiles>
+			<ns3:id>Employees</ns3:id>
+			<name>Arondor employees</name>
+			<Description>All employees of Arondor</Description>
+			<principals>Users</principals>
+			<principals>kta</principals>
+			<principals>phu</principals>
+			<principals>chris</principals>
+			<principals>jna</principals>
+			<principals>lho</principals>
+			<principals>adp3</principals>
+			<principals>rh</principals>
+			<principals>adg</principals>
+			<properties>
+				<ns3:name>tab.virtualfolder</ns3:name>
+				<ns3:value>9ca4443a-8f75-4424-b51b-d7308711f18a</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>tab.virtualfolder</ns3:name>
+				<ns3:value>root</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>tab.virtualfolder</ns3:name>
+				<ns3:value>MyTasks</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>tab.virtualfolder</ns3:name>
+				<ns3:value>Envelopes</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>search.template</ns3:name>
+				<ns3:value>DefaultSearch(Par défaut)</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>search.template</ns3:name>
+				<ns3:value>AgentSearch(Par agent)</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>place.shortcut</ns3:name>
+				<ns3:value>EnvelopeCreationPlace</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>home.widget.catalog</ns3:name>
+				<ns3:value>homeWidgets</ns3:value>
+			</properties>
+		</profiles>
+		<profiles>
+			<ns3:id>Board</ns3:id>
+			<name>Board of directors</name>
+			<Description>Board of directors</Description>
+			<principals>adg</principals>
+			<properties>
+				<ns3:name>home.aggregation</ns3:name>
+				<ns3:value>synthesis</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>tab.virtualfolder</ns3:name>
+				<ns3:value>MyCollectiveTasks</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>tab.virtualfolder</ns3:name>
+				<ns3:value>MyTrackedTasks</ns3:value>
+			</properties>
+		</profiles>
+		<profiles>
+			<ns3:id>DOCUMENT_CREATOR</ns3:id>
+			<name>Document creators</name>
+			<Description>Users who have access to insert tab</Description>
+			<principals>adp3</principals>
+		</profiles>
+		<profiles>
+			<ns3:id>ADMIN</ns3:id>
+			<name>Administrators</name>
+			<Description>Administrators profile</Description>
+			<principals>fadmin</principals>
+			<properties>
+				<ns3:name>search.template</ns3:name>
+				<ns3:value>DefaultSearch(Par défaut)</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>search.template</ns3:name>
+				<ns3:value>AgentSearch(Par agent)</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>home.widget.catalog</ns3:name>
+				<ns3:value>homeWidgets</ns3:value>
+			</properties>
+		</profiles>
+		<profiles>
+			<ns3:id>Accounting</ns3:id>
+			<name>Accounting department</name>
+			<Description>All users of accouting department</Description>
+			<principals>accounting1</principals>
+			<properties>
+				<ns3:name>tab.virtualfolder</ns3:name>
+				<ns3:value>MyTasks</ns3:value>
+			</properties>
+			<properties>
+				<ns3:name>tab.virtualfolder</ns3:name>
+				<ns3:value>MyCollectiveTasks</ns3:value>
+			</properties>
+		</profiles>
+		<profiles>
+			<ns3:id>ADP3</ns3:id>
+			<name>ADP3 agency</name>
+			<Description>All ADP3 employees</Description>
+			<principals>adp3</principals>
+		</profiles>
+	</people>
+</Scope>

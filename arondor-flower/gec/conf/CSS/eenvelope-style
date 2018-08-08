@@ -1,0 +1,16 @@
+.activity-popup.envelope {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15%;
+}
+
+.envelope .selection.clearfix {
+    padding-left:0 !important;
+    margin-left: 0 ! important;
+}
+
+.envelope .inline-form {
+    margin-bottom:10px !important;
+}
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">
+	
+
+	<bean id="componentCreationShortcuts" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<bean class="com.flower.docs.domain.component.ComponentReference">
+					<property name="category">
+						<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+					</property>
+					<property name="id">
+						<bean class="com.flower.docs.domain.common.Id">
+							<property name="value" value="CourrierEntrant" />
+						</bean>
+					</property>
+				</bean>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

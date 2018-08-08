@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">	
+	
+	<bean id="StatutCriterion"
+		class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="Statut" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="contentCollectiveAllVirtualFolder"
+		class="com.flower.docs.gui.client.search.ComponentSearchPresenter"
+		scope="prototype">
+		<property name="description" value="Consultez les courriers adressés aux services dont vous faites partie."/>
+		<property name="categorySelectorPresenter">
+			<bean
+				class="com.flower.docs.gui.client.search.criteria.item.FakeCategorySelectorPresenter">
+				<property name="value">
+					<value type="com.flower.docs.domain.component.Category">TASK</value>
+				</property>
+			</bean>
+		</property>
+		<property name="keywordCriteriaPresenter">
+			<bean
+				class="com.flower.docs.gui.client.search.criteria.KeywordCriteriaPresenter">
+				<property name="enabled" value="false" />
+			</bean>
+		</property>
+		<property name="hiddenColumns">
+			<list>
+				<value>status</value>
+				<value>DirectionDestinataire</value>
+				<value>ServiceDestinataire</value>
+			</list>
+		</property>
+		<property name="advancedCriteriaPresenter">
+			<bean
+				class="com.flower.docs.gui.client.search.criteria.advanced.AdvancedCriteriaPresenter">
+				<property name="enabled" value="true" />
+				<property name="forceOpen" value="true" />
+				<property name="inline" value="false" />
+				<property name="displayClassSelector" value="false" />
+				<property name="addEmptyCriterion" value="false" />
+				<property name="showSearchButton" value="true" />
+				<property name="searchButtonTitle" value="Filtrer" />
+				<property name="fixedCriterionPresenters">
+					<list>
+						<ref bean="RefClientCriterion" />
+						<ref bean="ObjetCriterion" />
+						<ref bean="StatutCriterion" />
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="contentPersonnelleVirtualFolder"
+		class="com.flower.docs.gui.client.search.ComponentSearchPresenter"
+		scope="prototype">
+		<property name="description" value="Traitez les courriers qui vous sont assignés."/>
+		<property name="categorySelectorPresenter">
+			<bean
+				class="com.flower.docs.gui.client.search.criteria.item.FakeCategorySelectorPresenter">
+				<property name="value">
+					<value type="com.flower.docs.domain.component.Category">TASK</value>
+				</property>
+			</bean>
+		</property>
+		<property name="keywordCriteriaPresenter">
+			<bean
+				class="com.flower.docs.gui.client.search.criteria.KeywordCriteriaPresenter">
+				<property name="enabled" value="false" />
+			</bean>
+		</property>
+		<property name="hiddenColumns">
+			<list>
+				<value>status</value>
+				<value>assignee</value>
+				<value>classid</value>
+				<value>DirectionDestinataire</value>
+				<value>ServiceDestinataire</value>
+			</list>
+		</property>
+		<property name="advancedCriteriaPresenter">
+			<bean
+				class="com.flower.docs.gui.client.search.criteria.advanced.AdvancedCriteriaPresenter">
+				<property name="enabled" value="false" />
+				<property name="forceOpen" value="true" />
+				<property name="inline" value="false" />
+				<property name="displayClassSelector" value="false" />
+				<property name="addEmptyCriterion" value="false" />
+				<property name="showSearchButton" value="true" />
+				<property name="searchButtonTitle" value="Filtrer" />
+				<property name="fixedCriterionPresenters">
+					<list>
+						<ref bean="RefClientCriterion" />
+						<ref bean="ObjetCriterion" />
+						<ref bean="StatutCriterion" />
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>

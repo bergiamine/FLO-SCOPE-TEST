@@ -1,0 +1,41 @@
+warning: Currently logging to gdbtrace.log.  Turn the logging off and on to make the new setting effective.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe1ada700 (LWP 7940)]
+[Thread 0x7fffe1ada700 (LWP 7940) exited]
+[Inferior 1 (process 7935) exited with code 01]
+/usr/lib/libreoffice/program/gdbtrace:9: Error in sourced command file:
+No stack.
+Quit
+Quit
+Quit
+Undefined command: "exit".  Try "help".
+Undefined command: "exit".  Try "help".
+Undefined command: "exit".  Try "help".
+Undefined command: "exit".  Try "help".
+warning: Currently logging to gdbtrace.log.  Turn the logging off and on to make the new setting effective.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe1ada700 (LWP 7981)]
+[Thread 0x7fffe1ada700 (LWP 7981) exited]
+[Inferior 1 (process 7976) exited with code 01]
+/usr/lib/libreoffice/program/gdbtrace:9: Error in sourced command file:
+No stack.
+No stack.
+warning: Currently logging to gdbtrace.log.  Turn the logging off and on to make the new setting effective.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe1ada700 (LWP 8024)]
+[New Thread 0x7fffd4107700 (LWP 8025)]
+[New Thread 0x7fffd3906700 (LWP 8026)]
+[New Thread 0x7fffd2dca700 (LWP 8027)]
+[New Thread 0x7fffd25c9700 (LWP 8030)]
+[Thread 0x7fffd25c9700 (LWP 8030) exited]
+[Thread 0x7fffd4107700 (LWP 8025) exited]
+[Thread 0x7fffd3906700 (LWP 8026) exited]
+[Thread 0x7fffe1ada700 (LWP 8024) exited]
+[Thread 0x7ffff7f14980 (LWP 8019) exited]
+[Inferior 1 (process 8019) exited with code 0115]
+/usr/lib/libreoffice/program/gdbtrace:9: Error in sourced command file:
+No stack.
+Quit

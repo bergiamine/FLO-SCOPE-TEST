@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>Famille</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CONDITIONAL</type>
+	<pattern></pattern>
+
+	<displayNames language="EN">
+		<ns4:value>Family</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Famille</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="DocumentsAdministratifs">
+		<displayNames language="FR">
+			<ns4:value>Documents administratifs</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Administrative documents</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="FinDeRelation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${user.authorities}.contains("RH")</conditions>
+		<conditions>${user.authorities}.contains("Employees")</conditions>
+		<displayNames language="FR">
+			<ns4:value>Fin de relation</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Relation end</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="AbsensesDiverses" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${user.authorities}.contains("RH")</conditions>
+		<displayNames language="FR">
+			<ns4:value>Absences diverses</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Various absences</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="ContratsEtAnnexes">
+		<displayNames language="FR">
+			<ns4:value>Contrats et annexes</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Contracts and appendix</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="AGRICA" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${user.authorities}.contains("RH")</conditions>
+		<displayNames language="FR">
+			<ns4:value>Agrica</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Agrica</ns4:value>
+		</displayNames>
+	</allowedValues>
+
+	<searchable>true</searchable>
+
+</TagClass>

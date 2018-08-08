@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document category="DOCUMENT" name="FA141044" xmlns:ns1="http://flower.com/docs/domain/component" xmlns:ns2="http://flower.com/docs/domain/common"
+	xmlns="http://flower.com/docs/domain/document" xmlns:ns3="http://flower.com/docs/domain/acl">
+
+	<ns2:id>76bf5ec8-4003-408b-a4af-6273429da005</ns2:id>
+
+	<ns1:data>
+		<ns2:creationDate>2015-04-22 12:35:57.444 +0200</ns2:creationDate>
+		<ns2:retentionStartDate>2000-12-12 12:35:57.448 +0100</ns2:retentionStartDate>
+		<ns2:validityCode>INVALID</ns2:validityCode>
+		<ns1:classId>ProviderBill</ns1:classId>
+		<ns2:ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ns2:ACL>
+	</ns1:data>
+
+	<ns1:Tags>
+		<ns1:tags name="BillType">
+			<ns1:value>Asset</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Provider">
+			<ns1:value>ARONDOR</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="TIAmount">
+			<ns1:value>1428</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="AmountHT">
+			<ns1:value>1190</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="BillStatus">
+			<ns1:value>processed</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Currency">
+			<ns1:value>Euro</ns1:value>
+		</ns1:tags>
+	</ns1:Tags>
+
+	<files>
+		<ns2:id>cb4f0091-e741-4c2b-83a5-6ddfa7247130</ns2:id>
+	</files>
+
+</Document>

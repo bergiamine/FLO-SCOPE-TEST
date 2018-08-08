@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AccessControlList name="ACL Lecture seule" xmlns="http://flower.com/docs/domain/acl" xmlns:common="http://flower.com/docs/domain/common">
+	<common:id>e0f8c39c-94c5-4640-86cc-0d8ed3cb7504</common:id>
+	<entries>
+		<principal>Employees</principal>
+		<permission>READ</permission>
+		<permission>READ_HISTORY</permission>
+		<grant>ALLOW</grant>
+	</entries>
+</AccessControlList>

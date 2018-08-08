@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">
+     
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="locations">
+			<list>
+				<value>file:#{(systemProperties['flower.docs.config.dir'])?:systemProperties['user.home']+'/FlowerDocs'}/flowerdocs.properties</value>
+				<value>classpath:version.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+    <bean id="appInfo" class="com.flower.docs.gui.client.layout.ApplicationInfo">
+		<property name="description" value="GEC" />
+		<property name="environment" value="DEMO" />
+		<property name="logoURL" value="images/flower_logo-purple.png" />
+		<property name="version" value="${application.version}" />
+		<property name="build" value="${application.build}" />
+		<property name="styleSheet" value="${gui.client.app.style:}" />
+	</bean>
+    
+	<bean id="dataCriteriaCatalog" class="com.flower.docs.gui.client.search.SearchableFieldCatalog">
+		<property name="documentSearchableData">
+			<list>
+				<ref bean="Name" />
+				<ref bean="creationDate" />
+				<ref bean="lastUpdateDate" />
+				<ref bean="Owner" />
+				<ref bean="Id" />
+			</list>
+		</property>
+		<property name="virtualFolderSearchableData">
+			<list>
+				<ref bean="Name" />
+				<ref bean="creationDate" />
+				<ref bean="lastUpdateDate" />
+				<ref bean="Id" />
+			</list>
+		</property>
+		<property name="folderSearchableData">
+			<list>
+				<ref bean="Name" />
+				<ref bean="creationDate" />
+				<ref bean="lastUpdateDate" />
+				<ref bean="Owner" />
+				<ref bean="Id" />
+			</list>
+		</property>
+		<property name="taskSearchableData">
+			<list>
+				<ref bean="creationDate" />
+				<ref bean="lastUpdateDate" />
+				<ref bean="Assignee" />
+				<ref bean="Workflow" />
+			</list>
+		</property>
+	</bean>
+	
+</beans>

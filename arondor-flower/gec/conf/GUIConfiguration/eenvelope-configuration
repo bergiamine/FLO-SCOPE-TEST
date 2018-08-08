@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Start of Place shortcuts definition -->
+	<bean id="EnvelopeCreationPlace" class="com.flower.docs.gui.client.layout.shortcut.ActivityReference">
+		<property name="title" value="e-Enveloppe" />
+		<property name="popupTitle" value="Création d'enveloppe" />
+		<property name="description" value="Avant de créer une enveloppe, merci de vérifier que celle-ci n'existe pas déjà" />
+		<property name="icon" value="envelope fa-envelope-o" />
+		<property name="style" value="envelope" />
+		<property name="place">
+			<bean class="com.flower.docs.gui.client.search.CreateWithVerificationPlace">
+				<property name="id">
+					<bean class="com.flower.docs.domain.common.Id">
+						<property name="value" value="EEnvelopeSearch" />
+					</bean>
+				</property>
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">TASK</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- End of Place shorcuts definition -->
+
+	<bean id="EEnvelopeSearch" class="com.flower.docs.gui.client.search.ComponentSearchPresenter" scope="prototype">
+		<property name="enableIfInvalid" value="true" />
+		<property name="style" value="envelope-search" />
+		<property name="categorySelectorPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.item.FakeCategorySelectorPresenter">
+				<property name="value">
+					<value type="com.flower.docs.domain.component.Category">TASK</value>
+				</property>
+			</bean>
+		</property>
+		<property name="keywordCriteriaPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.KeywordCriteriaPresenter">
+				<property name="enabled" value="false" />
+			</bean>
+		</property>
+		<property name="advancedCriteriaPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.advanced.AdvancedCriteriaPresenter">
+				<property name="enabled" value="true" />
+				<property name="forceOpen" value="true" />
+				<property name="inline" value="true" />
+				<property name="displayClassSelector" value="false" />
+				<property name="addEmptyCriterion" value="false" />
+				<property name="showSearchButton" value="true" />
+				<property name="searchButtonTitle" value="Vérifier" />
+				<property name="fixedCriterionPresenters">
+					<list>
+						<ref bean="ServiceMandatoryFilter" />
+						<ref bean="WorkflowMandatoryFilter" />
+						<ref bean="RefClientFilterMandatoryFilter" />
+					</list>
+				</property>
+			</bean>
+		</property>
+		<property name="hiddenColumns">
+			<list>
+				<value>status</value>
+			</list>
+		</property>
+		<property name="hiddenRequest">
+			<bean class="com.flower.docs.domain.search.SearchRequest">
+				<property name="selectClause">
+					<bean class="com.flower.docs.domain.search.SelectClause">
+						<property name="fields">
+							<list>
+								<value>reservation</value>
+								<value>name</value>
+								<value>classid</value>
+								<value>creationDate</value>
+								<value>lastUpdateDate</value>
+							</list>
+						</property>
+					</bean>
+				</property>
+			</bean>
+		</property>
+		<property name="actions">
+			<list>
+				<bean class="com.flower.docs.gui.client.search.action.ComponentCreationActionPresenter">
+					<constructor-arg type="java.lang.String" value="Créer une enveloppe" />
+					<property name="redirectionStrategy" ref="reloadRedirection" />
+					<property name="category">
+							<value type="com.flower.docs.domain.component.Category">TASK</value>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="reloadRedirection" class="com.flower.docs.gui.client.action.redirect.ReloadRedirectionStrategy" />
+
+	<bean id="WorkflowMandatoryFilter" class="com.flower.docs.gui.client.search.criterion.FilterCriterionPresenter">
+		<property name="displayOperatorSelector" value="false" />
+		<property name="forceMonovalued" value="true" />
+		<property name="mandatory" value="true" />
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="workflow" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="ServiceMandatoryFilter" class="com.flower.docs.gui.client.search.criterion.FilterCriterionPresenter">
+		<property name="displayOperatorSelector" value="false" />
+		<property name="forceMonovalued" value="true" />
+		<property name="mandatory" value="true" />
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="ServiceDestinataire" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="RefClientFilterMandatoryFilter" class="com.flower.docs.gui.client.search.criterion.FilterCriterionPresenter">
+		<property name="displayOperatorSelector" value="false" />
+		<property name="mandatory" value="true" />
+		<property name="forceMonovalued" value="true" />
+		<property name="description" value="Saisissez une valeur" />
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="RefClient" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="classMandatoryFilter" class="com.flower.docs.gui.client.search.criteria.clazz.CreatableWorkflowTaskClassCriterionSelectorPresenter">
+		<property name="displayOperatorSelector" value="false" />
+		<property name="forceMonovalued" value="true" />
+		<property name="mandatory" value="true" />
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="classid" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- End of Envelope Creation Search template -->
+
+	<bean id="contentEenvelopesVirtualFolder" class="com.flower.docs.gui.client.search.ComponentSearchPresenter" scope="prototype">
+		<property name="categorySelectorPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.item.FakeCategorySelectorPresenter">
+				<property name="value">
+					<value type="com.flower.docs.domain.component.Category">TASK</value>
+				</property>
+			</bean>
+		</property>
+		<property name="keywordCriteriaPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.KeywordCriteriaPresenter">
+				<property name="enabled" value="false" />
+			</bean>
+		</property>
+		<property name="advancedCriteriaPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.advanced.AdvancedCriteriaPresenter">
+				<property name="enabled" value="true" />
+				<property name="forceOpen" value="true" />
+				<property name="inline" value="true" />
+				<property name="displayClassSelector" value="false" />
+				<property name="addEmptyCriterion" value="false" />
+				<property name="showSearchButton" value="true" />
+				<property name="searchButtonTitle" value="Filtrer" />
+				<property name="fixedCriterionPresenters">
+					<list>
+						<ref bean="WorkflowFilter" />
+						<ref bean="RefClientFilter" />
+					</list>
+				</property>
+			</bean>
+		</property>
+		<property name="hiddenColumns">
+			<list>
+				<value>status</value>
+			</list>
+		</property>
+		<property name="actions">
+			<list>
+				<bean class="com.flower.docs.gui.client.activity.action.ActivityActionPresenter">
+					<constructor-arg type="java.lang.String" value="Créer une e-Enveloppe" />
+					<constructor-arg>
+						<bean class="com.flower.docs.gui.client.search.CreateWithVerificationPlace">
+							<property name="id">
+								<bean class="com.flower.docs.domain.common.Id">
+									<property name="value" value="EEnvelopeSearch" />
+								</bean>
+							</property>
+							<property name="category">
+								<value type="com.flower.docs.domain.component.Category">TASK</value>
+							</property>
+						</bean>
+					</constructor-arg>
+					<property name="style" value="envelope" />
+					<property name="icon" value="envelope fa-envelope-o" />
+					<property name="title" value="Création d'enveloppe" />
+					<property name="description" value="Avant de créer une enveloppe, merci de vérifier que celle-ci n'existe pas déjà" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="WorkflowFilter" class="com.flower.docs.gui.client.search.criterion.FilterCriterionPresenter">
+		<property name="displayOperatorSelector" value="false" />
+		<property name="forceMonovalued" value="true" />
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="workflow" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="RefClientFilter" class="com.flower.docs.gui.client.search.criterion.FilterCriterionPresenter">
+		<property name="displayOperatorSelector" value="false" />
+		<property name="forceMonovalued" value="true" />
+		<property name="description" value="Saisissez une valeur" />
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="RefClient" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">STARTS_WITH</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>

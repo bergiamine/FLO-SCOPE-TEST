@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>ContractorType</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CHOICELIST</type>
+	<pattern></pattern>
+
+	<displayNames language="EN">
+		<ns4:value>Contractor type</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Type de contractant</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="Client">
+		<displayNames language="FR">
+			<ns4:value>Client</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Client</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Provider">
+		<displayNames language="FR">
+			<ns4:value>Fournisseur</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Provider</ns4:value>
+		</displayNames>
+	</allowedValues>
+
+	<searchable>true</searchable>
+
+</TagClass>

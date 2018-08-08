@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:TaskClass category="TASK" active="false" technical="false" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/componentclass"
+	xmlns:ns4="http://flower.com/docs/domain/tagclass" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns6="http://flower.com/docs/domain/component"
+	xmlns:ns20="http://flower.com/docs/domain/virtualFolder" xmlns:ns5="http://flower.com/docs/domain/taskclass" xmlns:ns8="http://flower.com/docs/domain/search"
+	xmlns:ns7="http://flower.com/docs/domain/acl" xmlns:ns13="http://flower.com/docs/domain/report" xmlns:ns9="http://flower.com/docs/domain/file"
+	xmlns:ns12="http://flower.com/docs/domain/workflow" xmlns:ns11="http://flower.com/docs/domain/scope" xmlns:ns22="http://flower.com/docs/domain/fact"
+	xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns21="http://flower.com/docs/domain/task" xmlns:ns17="http://flower.com/docs/domain/documentclass"
+	xmlns:ns16="http://flower.com/docs/domain/folderclass" xmlns:ns15="http://flower.com/docs/domain/security" xmlns:ns14="http://flower.com/docs/domain/virtualfolderclass"
+	xmlns:ns19="http://flower.com/docs/domain/folder" xmlns:ns18="http://flower.com/docs/domain/document">
+	<id>GEC_Step2_ATraiter</id>
+	<ns2:data>
+		<owner>fadmin</owner>
+		<creationDate>2017-10-03 23:26:37.179 +0200</creationDate>
+		<lastUpdateDate>2017-10-07 18:33:04.858 +0200</lastUpdateDate>
+		<ACL>ACL_TASK</ACL>
+	</ns2:data>
+	<ns2:tagCategories>InfoCourrier</ns2:tagCategories>
+	<ns2:tagCategories>InfoClient</ns2:tagCategories>
+	<ns2:tagCategories>InfoDistribution</ns2:tagCategories>
+	<ns2:tagReferences tagName="DateCourrier" mandatory="false" multivalued="false" technical="false" readonly="true" order="0" />
+	<ns2:tagReferences tagName="ObjetCourrier" mandatory="false" multivalued="false" technical="false" readonly="true" order="0" />
+	<ns2:tagReferences tagName="ServiceDestinataire" mandatory="true" multivalued="false" technical="false" readonly="true"
+		order="0" />
+	<ns2:tagReferences tagName="Priorite" mandatory="true" multivalued="false" technical="false" readonly="false" order="0"
+		defaultValue="2_NORMALE" />
+	<ns2:tagReferences tagName="TypeCourrier" mandatory="false" multivalued="false" technical="false" readonly="true" order="0" />
+	<ns2:tagReferences tagName="CanalEntree" mandatory="false" multivalued="false" technical="false" readonly="true" order="0" />
+	<ns2:tagReferences tagName="NomClient" mandatory="false" multivalued="false" technical="false" readonly="true" order="0" />
+	<ns2:tagReferences tagName="PrenomClient" mandatory="false" multivalued="false" technical="false" readonly="true" order="0" />
+	<ns2:tagReferences tagName="Statut" mandatory="false" multivalued="false" technical="false" readonly="false" order="0" />
+	<ns2:tagReferences tagName="RefClient" mandatory="false" multivalued="false" technical="false" readonly="true" order="0" />
+	<ns2:tagReferences tagName="Commentaire" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+		<ns4:descriptions language="EN">
+			<ns3:value>Fill your comment</ns3:value>
+		</ns4:descriptions>
+		<ns4:descriptions language="FR">
+			<ns3:value>Saisissez un commentaire</ns3:value>
+		</ns4:descriptions>
+		<ns4:pattern></ns4:pattern>
+	</ns2:tagReferences>
+	<ns2:tagReferences tagName="LastCommentaire" mandatory="false" multivalued="false" technical="false" readonly="false"
+		order="0" />
+	<ns2:displayNames language="FR">
+		<ns3:value>Courrier à traiter</ns3:value>
+	</ns2:displayNames>
+	<ns2:displayNames language="EN">
+		<ns3:value></ns3:value>
+	</ns2:displayNames>
+	<ns2:descriptions language="EN">
+		<ns3:value></ns3:value>
+	</ns2:descriptions>
+	<ns2:descriptions language="FR">
+		<ns3:value>Veuillez traiter ce courrier en y ajoutant un courrier de réponse ou bien en désignant un de vos collaborateurs pour
+			contribution
+		</ns3:value>
+	</ns2:descriptions>
+	<ns2:RetentionDuration>
+		<value>0</value>
+		<unit>MONTH</unit>
+	</ns2:RetentionDuration>
+	<ns5:icon>fa-hand-pointer-o</ns5:icon>
+	<ns5:children readonly="true" category="DOCUMENT">
+		<id>Courrier</id>
+		<ns5:classId>CourrierEntrant</ns5:classId>
+		<ns5:displayNames language="EN" />
+		<ns5:displayNames language="FR">
+			<ns3:value>Courrier entrant</ns3:value>
+		</ns5:displayNames>
+		<ns6:Tags />
+		<ns5:synopsis language="EN">
+			<ns3:value></ns3:value>
+		</ns5:synopsis>
+		<ns5:synopsis language="FR">
+			<ns3:value>Courrier reçu</ns3:value>
+		</ns5:synopsis>
+	</ns5:children>
+	<ns5:children readonly="false" category="DOCUMENT">
+		<id>Reponse</id>
+		<ns5:classId>CourrierSortant</ns5:classId>
+		<ns5:displayNames language="EN" />
+		<ns5:displayNames language="FR">
+			<ns3:value>Réponse</ns3:value>
+		</ns5:displayNames>
+		<ns6:Tags />
+		<ns5:synopsis language="EN">
+			<ns3:value></ns3:value>
+		</ns5:synopsis>
+		<ns5:synopsis language="FR">
+			<ns3:value>Réponse au courrier</ns3:value>
+		</ns5:synopsis>
+	</ns5:children>
+	<ns5:answers>
+		<id>Valider</id>
+		<ns5:displayNames language="EN">
+			<ns3:value>Process</ns3:value>
+		</ns5:displayNames>
+		<ns5:displayNames language="FR">
+			<ns3:value>Traiter</ns3:value>
+		</ns5:displayNames>
+		<ns5:confirmationMessages language="EN">
+			<ns3:value>Are you sure you have processed the processing? Once processed, it will remain accessible in your processed mail.</ns3:value>
+		</ns5:confirmationMessages>
+		<ns5:confirmationMessages language="FR">
+			<ns3:value>Etes-vous sûr d'avoir terminé le traitement du courrier ? Une fois traité, il restera accessible dans vos courriers traités.
+			</ns3:value>
+		</ns5:confirmationMessages>
+	</ns5:answers>
+	<ns5:answers xsi:type="ns5:ReasonedAnswerDefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<id>Inform</id>
+		<ns5:displayNames language="EN">
+			<ns3:value>Inform</ns3:value>
+		</ns5:displayNames>
+		<ns5:displayNames language="FR">
+			<ns3:value>Informer</ns3:value>
+		</ns5:displayNames>
+		<ns5:confirmationMessages language="EN">
+			<ns3:value></ns3:value>
+		</ns5:confirmationMessages>
+		<ns5:confirmationMessages language="FR">
+			<ns3:value></ns3:value>
+		</ns5:confirmationMessages>
+		<ns5:reasons tagName="DestinatairePourInfo" order="0" mandatory="true" multivalued="true">
+			<ns4:descriptions language="EN">
+				<ns3:value>Select people to inform</ns3:value>
+			</ns4:descriptions>
+			<ns4:descriptions language="FR">
+				<ns3:value>Les utilisateurs à informer</ns3:value>
+			</ns4:descriptions>
+		</ns5:reasons>
+	</ns5:answers>
+	<ns5:answers xsi:type="ns5:ReasonedAnswerDefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<id>Reassign</id>
+		<ns5:displayNames language="EN">
+			<ns3:value>Reassign</ns3:value>
+		</ns5:displayNames>
+		<ns5:displayNames language="FR">
+			<ns3:value>Ré-assigner</ns3:value>
+		</ns5:displayNames>
+		<ns5:confirmationMessages language="EN">
+			<ns3:value>Are you sure you want to re-assign the mail to the selected collaborator?</ns3:value>
+		</ns5:confirmationMessages>
+		<ns5:confirmationMessages language="FR">
+			<ns3:value>Etes-vous sûr de vouloir ré-assigner le courrier à un autre collaborateur ? </ns3:value>
+		</ns5:confirmationMessages>
+		<ns5:reasons tagName="DestinatairePourAction" order="0" mandatory="true">
+			<ns4:descriptions language="EN">
+				<ns3:value>Determine who should process the mail</ns3:value>
+			</ns4:descriptions>
+			<ns4:descriptions language="FR">
+				<ns3:value>Déterminer le collaborateur devant contribuer au traitement du courrier</ns3:value>
+			</ns4:descriptions>
+		</ns5:reasons>
+	</ns5:answers>
+	<ns5:answers xsi:type="ns5:ReasonedAnswerDefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<id>Refuser</id>
+		<ns5:displayNames language="EN">
+			<ns3:value>Refuse</ns3:value>
+		</ns5:displayNames>
+		<ns5:displayNames language="FR">
+			<ns3:value>Refuser</ns3:value>
+		</ns5:displayNames>
+		<ns5:confirmationMessages language="EN">
+			<ns3:value>Are you sure you want to refuse this mail ? It will go to distrubtion step.</ns3:value>
+		</ns5:confirmationMessages>
+		<ns5:confirmationMessages language="FR">
+			<ns3:value>Etes-vous sûr de vouloir refuser ce courrier ? Si vous validez, il sera renvoyé à l'étape de distribution.</ns3:value>
+		</ns5:confirmationMessages>
+		<ns5:reasons tagName="Commentaire" order="0" mandatory="true">
+			<ns4:descriptions language="EN">
+				<ns3:value>Motivate your choice</ns3:value>
+			</ns4:descriptions>
+			<ns4:descriptions language="FR">
+				<ns3:value>Indiquer le motif de refus</ns3:value>
+			</ns4:descriptions>
+		</ns5:reasons>
+	</ns5:answers>
+	<ns5:workflow>GEC</ns5:workflow>
+</ns5:TaskClass>

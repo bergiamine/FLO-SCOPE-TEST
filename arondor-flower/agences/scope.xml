@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:Scope xmlns:ns16="http://flower.com/docs/domain/componentclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/documentclass"
+	xmlns:ns14="http://flower.com/docs/domain/document" xmlns:ns15="http://flower.com/docs/domain/folder" xmlns:ns18="http://flower.com/docs/domain/folderclass"
+	xmlns:ns19="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns9="http://flower.com/docs/domain/reservation" xmlns:ns5="http://flower.com/docs/domain/acl"
+	xmlns:ns12="http://flower.com/docs/domain/task" xmlns:ns13="http://flower.com/docs/domain/virtualFolder" xmlns:ns6="http://flower.com/docs/domain/search"
+	xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/report" xmlns:ns20="http://flower.com/docs/domain/tagclass"
+	xmlns:ns8="http://flower.com/docs/domain/taskclass" xmlns:ns11="http://flower.com/docs/domain/security" xmlns:ns2="http://flower.com/docs/domain/scope"
+	xmlns:ns4="http://flower.com/docs/domain/component" xmlns:ns3="http://flower.com/docs/domain/i18n">
+	<id>Agences</id>
+	<ns2:description>Demonstration scope for Agences </ns2:description>
+	<ns2:displayNames language="EN">
+		<ns3:value>Agences</ns3:value>
+	</ns2:displayNames>
+	<ns2:displayNames language="FR">
+		<ns3:value> Agences   </ns3:value>
+	</ns2:displayNames>
+	<ns2:languages>EN</ns2:languages>
+	<ns2:languages>FR</ns2:languages>
+	<ns2:data>
+		<owner>fadmin</owner>
+		<creationDate>2016-03-15 01:37:40.079 +0100</creationDate>
+		<lastUpdateDate>2016-03-15 01:37:40.079 +0100</lastUpdateDate>
+		<ACL>2b33ca56-3078-11e5-a151-feff819cdc9f</ACL>
+	</ns2:data>
+	<ns2:people>
+		<ns2:profiles>
+			<id>ADMIN</id>
+			<ns2:name>Administrators</ns2:name>
+			<ns2:Description>Administrators profile</ns2:Description>
+			<ns2:principals>fadmin</ns2:principals>
+			<ns2:properties>
+				<name>search.template</name>
+				<value>DefaultSearch(Par défaut)</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>home.hide</name>
+				<value>true</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>place.default</name>
+				<value>Search(DefaultSearch)</value>
+			</ns2:properties>
+		</ns2:profiles>
+		<ns2:profiles>
+			<id>Board</id>
+			<ns2:name>Directeurs</ns2:name>
+			<ns2:Description>Directeurs</ns2:Description>
+			<ns2:properties>
+				<name>tab.folder</name>
+				<value>root</value>
+			</ns2:properties>
+		</ns2:profiles>
+		<ns2:profiles>
+			<id>Gestionnaires</id>
+			<ns2:name>Gestionnaires de biens</ns2:name>
+			<ns2:Description>Gestionnaires</ns2:Description>
+			<ns2:principals>phu</ns2:principals>
+			<ns2:properties>
+				<name>tab.virtualfolder</name>
+				<value>MyTasks</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>tab.virtualfolder</name>
+				<value>MyCollectiveTasks</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>search.template</name>
+				<value>DefaultSearch(Par défaut)</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>search.template</name>
+				<value>CustomerBillView(Factures client)</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>tab.folder</name>
+				<value>4388b65d-824d-48a2-bb6d-1e4c2e8c733d</value>
+			</ns2:properties>
+		</ns2:profiles>
+		<ns2:profiles>
+			<id>Assistants</id>
+			<ns2:name>Assistants</ns2:name>
+			<ns2:Description>Assistants des gestionnaires</ns2:Description>
+			<ns2:principals>kta</ns2:principals>
+			<ns2:properties>
+				<name>tab.virtualfolder</name>
+				<value>MyTasks</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>search.template</name>
+				<value>DefaultSearch(Par défaut)</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>tab.virtualfolder</name>
+				<value>PdC_Juridique</value>
+			</ns2:properties>
+		</ns2:profiles>
+		<ns2:profiles>
+			<id>Accounting</id>
+			<ns2:name>Comptables</ns2:name>
+			<ns2:Description>Service comptabilité</ns2:Description>
+			<ns2:principals>accounting1</ns2:principals>
+			<ns2:principals>phu</ns2:principals>
+			<ns2:properties>
+				<name>tab.virtualfolder</name>
+				<value>a989982b-1c8e-4eac-bcbc-d9607756bbe7</value>
+			</ns2:properties>
+		</ns2:profiles>
+		<ns2:profiles>
+			<id>AgencyA</id>
+			<ns2:name>Agence A</ns2:name>
+			<ns2:Description>Tout le personnel de l'agence A</ns2:Description>
+			<ns2:properties>
+				<name>tab.virtualfolder</name>
+				<value>MyScanInbox</value>
+			</ns2:properties>
+		</ns2:profiles>
+		<ns2:profiles>
+			<id>Employees</id>
+			<ns2:name>All employees</ns2:name>
+			<ns2:Description>All employees of agences</ns2:Description>
+			<ns2:principals>Users</ns2:principals>
+			<ns2:principals>kta</ns2:principals>
+			<ns2:principals>phu</ns2:principals>
+			<ns2:properties>
+				<name>search.template</name>
+				<value>DefaultSearch(Par défaut)</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>search.template</name>
+				<value>Locataires(Par locataire)</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>search.template</name>
+				<value>CustomerView(Par fournisseur)</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>home.widget.catalog</name>
+				<value>homeWidgets</value>
+			</ns2:properties>
+		</ns2:profiles>
+		<ns2:profiles>
+			<id>Juristes</id>
+			<ns2:name>Juristes</ns2:name>
+			<ns2:Description>Equipe regroupant les jurites</ns2:Description>
+			<ns2:principals>kta</ns2:principals>
+			<ns2:properties>
+				<name>tab.virtualfolder</name>
+				<value>PdC_Juridique</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>home.aggregation</name>
+				<value>synthesis</value>
+			</ns2:properties>
+			<ns2:properties>
+				<name>tab.virtualfolder</name>
+				<value>CollectiveMailInbox</value>
+			</ns2:properties>
+		</ns2:profiles>
+	</ns2:people>
+	<ns2:file>e38cfe18-373b-47ee-aedd-0b87a1eb1ec3</ns2:file>
+</ns2:Scope>

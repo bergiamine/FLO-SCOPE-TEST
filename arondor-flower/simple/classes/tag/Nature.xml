@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>Nature</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CONDITIONAL</type>
+	<pattern />
+
+	<displayNames language="EN">
+		<ns4:value>Nature</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Nature</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="natures_for_admin_docs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.Famille}==DocumentsAdministratifs</conditions>
+		<allowedValues symbolicName="CV">
+			<displayNames language="FR">
+				<ns4:value>CV</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>CV</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="CarteVitale">
+			<displayNames language="FR">
+				<ns4:value>Carte vitale</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Carte vitale</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="ExtraitCasier">
+			<displayNames language="FR">
+				<ns4:value>Extrait du casier judiciaire</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Criminal record extract</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+	<allowedValues symbolicName="natures_for_not_admin_docs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.Famille}!=DocumentsAdministratifs</conditions>
+		<allowedValues symbolicName="Other_Not_Admin">
+			<displayNames language="FR">
+				<ns4:value>Autre document non administratif</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Other not administrative document</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+	<allowedValues symbolicName="natures_for_relation_ends" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.Famille}==FinDeRelation</conditions>
+		<allowedValues symbolicName="Licenciement">
+			<displayNames language="FR">
+				<ns4:value>Licenciement</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Termination</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="Demission">
+			<displayNames language="FR">
+				<ns4:value>Démission</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Resignation</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+	<allowedValues symbolicName="natures_for_various_absences" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.Famille}==AbsensesDiverses</conditions>
+		<allowedValues symbolicName="BilanCompetences">
+			<displayNames language="FR">
+				<ns4:value>Bilan de compétences</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Skills assessment</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="CongesIndividuelDeFormation">
+			<displayNames language="FR">
+				<ns4:value>Congés individuel de formation (CIF)</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Individual training leave</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="CongesParentalEducation">
+			<displayNames language="FR">
+				<ns4:value>Congés parental d'éducation</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Parental training leave</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<allowedValues symbolicName="natures_for_contracts_and_appendix" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.Famille}==ContratsEtAnnexes</conditions>
+		<allowedValues symbolicName="ClauseRelativeCreationLogiciel">
+			<displayNames language="FR">
+				<ns4:value>Clause relative à la création de logiciel</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Clause on the creation of software</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="BMMobilite">
+			<displayNames language="FR">
+				<ns4:value>BM mobilité</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Mobility BM</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="EnregistrementTelephonique">
+			<displayNames language="FR">
+				<ns4:value>Enregistrement téléphonique</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Phone recording</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+
+	<allowedValues symbolicName="natures_for_not_empty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.Famille}!=</conditions>
+		<allowedValues symbolicName="Unknown">
+			<displayNames language="FR">
+				<ns4:value>Inconnue</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Unknown</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<searchable>true</searchable>
+
+</TagClass>

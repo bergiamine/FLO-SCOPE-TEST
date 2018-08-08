@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns7:DocumentClass category="DOCUMENT" xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/componentclass"
+	xmlns:ns4="http://flower.com/docs/domain/folderclass" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns5="http://flower.com/docs/domain/component"
+	xmlns:ns7="http://flower.com/docs/domain/documentclass">
+
+	<ns2:id>CourrierEntrant</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-09-22 17:31:30.163 +0200</ns2:creationDate>
+		<ns2:ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ns2:ACL>
+	</data>
+
+	<tagReferences tagName="Channel" mandatory="false" order="0" />
+	<tagReferences tagName="Sender" mandatory="false" order="1" />
+	<tagReferences tagName="ServiceName" mandatory="true" order="2" />
+	<tagReferences tagName="Receiver" mandatory="false" order="3" />
+	<tagReferences tagName="Priority" mandatory="false" order="4" />
+	<tagReferences tagName="Assignee" mandatory="false" order="6" />
+	<tagReferences tagName="ReceivedDate" mandatory="false" order="7" />
+	<tagReferences tagName="ExpiredDate" mandatory="false" order="8" />
+	<tagReferences tagName="Annotations" multivalued="true" technical="true"  />
+
+	<displayNames language="EN">
+		<ns3:value>Incoming mail</ns3:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns3:value>Courrier entrant</ns3:value>
+	</displayNames>
+
+</ns7:DocumentClass>

@@ -1,0 +1,22 @@
+[  
+  {
+    "_id": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+    "_type": "search",
+    "_source": {
+      "title": "Tâches de traitement de courrier",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "_score",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gec-flower-docs\",\"query\":{\"query_string\":{\"query\":\"_type:task\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  }
+]

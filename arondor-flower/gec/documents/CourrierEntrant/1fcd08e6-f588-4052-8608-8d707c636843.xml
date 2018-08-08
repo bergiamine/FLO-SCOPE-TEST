@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Document category="DOCUMENT" name="Facture 1" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/file" xmlns:ns3="http://flower.com/docs/domain/document" xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns20="http://flower.com/docs/domain/documentclass" xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns8="http://flower.com/docs/domain/taskclass" xmlns:ns7="http://flower.com/docs/domain/i18n" xmlns:ns13="http://flower.com/docs/domain/folder" xmlns:ns9="http://flower.com/docs/domain/reservation" xmlns:ns12="http://flower.com/docs/domain/virtualFolder" xmlns:ns11="http://flower.com/docs/domain/scope" xmlns:ns22="http://flower.com/docs/domain/security" xmlns:ns10="http://flower.com/docs/domain/task" xmlns:ns21="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns17="http://flower.com/docs/domain/componentclass" xmlns:ns16="http://flower.com/docs/domain/fact" xmlns:ns15="http://flower.com/docs/domain/workflow" xmlns:ns14="http://flower.com/docs/domain/report" xmlns:ns19="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/tagclass">
+    <id>1fcd08e6-f588-4052-8608-8d707c636843</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2017-10-11 14:28:33.788 +0200</creationDate>
+        <lastUpdateDate>2017-10-11 14:28:33.788 +0200</lastUpdateDate>
+        <ACL>acl-courrier-entrant</ACL>
+        <ns2:classId>CourrierEntrant</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="CanalEntree" readOnly="false">
+            <ns2:value>1</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="PrenomClient" readOnly="false">
+            <ns2:value>Jean</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="DateCourrier" readOnly="false">
+            <ns2:value>1507724874808</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="RefClient" readOnly="false">
+            <ns2:value>123456</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="NomClient" readOnly="false">
+            <ns2:value>DUPONT</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="ObjetCourrier" readOnly="false">
+            <ns2:value>Assurance Habitation</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="TypeCourrier" readOnly="false">
+            <ns2:value>Contrat</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Annotations" readOnly="false"/>
+    </ns2:Tags>
+    <ns3:files size="0">
+        <id>1fcd08e6-f588-4052-8608-8d707c636843</id>
+    </ns3:files>
+</ns3:Document>

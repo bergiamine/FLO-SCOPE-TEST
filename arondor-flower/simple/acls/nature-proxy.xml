@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ACLProxy name="Nature ACL Proxy" xmlns="http://flower.com/docs/domain/acl" xmlns:common="http://flower.com/docs/domain/common">
+
+	<common:id>c227292c-4593-4785-99fa-46410ee00f12</common:id>
+
+	<rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ACLConditionalRule">
+		<conditions>${tags.Nature}==CV</conditions>
+		<aclId>e0f8c39c-94c5-4640-86cc-0d8ed3cb7504</aclId>
+	</rules>
+	<rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ACLConditionalRule">
+		<conditions>${user.authorities}.contains("Employees")</conditions>
+		<aclId>e0f8c39c-94c5-4640-86cc-0d8ed3cb7504</aclId>
+	</rules>
+	<rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ACLConditionalRule">
+		<aclId>4a3682a6-48f7-40e7-8990-54634e0aa42e</aclId>
+	</rules>
+
+</ACLProxy>

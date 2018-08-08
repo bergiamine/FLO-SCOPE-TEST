@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AccessControlList name="Sécurité par défaut des dossiers" xmlns="http://flower.com/docs/domain/acl" xmlns:common="http://flower.com/docs/domain/common">
+	<common:id>21ef31e8-3072-11e5-a151-feff819cdc9f</common:id>
+	<entries>
+		<principal>Employees</principal>
+		<permission>CREATE</permission>
+		<permission>READ</permission>
+		<permission>UPDATE</permission>
+		<grant>ALLOW</grant>
+	</entries>
+</AccessControlList>

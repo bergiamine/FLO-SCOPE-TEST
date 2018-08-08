@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns20:ACLProxy name="Nature ACL Proxy" xmlns:ns16="http://flower.com/docs/domain/documentclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/folderclass" xmlns:ns14="http://flower.com/docs/domain/folder" xmlns:ns15="http://flower.com/docs/domain/componentclass" xmlns:ns18="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns19="http://flower.com/docs/domain/tagclass" xmlns:ns9="http://flower.com/docs/domain/security" xmlns:ns5="http://flower.com/docs/domain/i18n" xmlns:ns12="http://flower.com/docs/domain/virtualFolder" xmlns:ns13="http://flower.com/docs/domain/document" xmlns:ns6="http://flower.com/docs/domain/taskclass" xmlns:ns7="http://flower.com/docs/domain/reservation" xmlns:ns10="http://flower.com/docs/domain/component" xmlns:ns20="http://flower.com/docs/domain/acl" xmlns:ns8="http://flower.com/docs/domain/report" xmlns:ns11="http://flower.com/docs/domain/task" xmlns:ns2="http://flower.com/docs/domain/search" xmlns:ns4="http://flower.com/docs/domain/file" xmlns:ns3="http://flower.com/docs/domain/scope">
+    <id>c227292c-4593-4785-99fa-46410ee00f12</id>
+    <ns20:rules xsi:type="ns20:ACLConditionalRule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <ns20:aclId>e0f8c39c-94c5-4640-86cc-0d8ed3cb7504</ns20:aclId>
+        <ns20:conditions>${tags.Nature}==CV</ns20:conditions>
+    </ns20:rules>
+    <ns20:rules xsi:type="ns20:ACLConditionalRule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <ns20:aclId>e0f8c39c-94c5-4640-86cc-0d8ed3cb7504</ns20:aclId>
+        <ns20:conditions>${user.authorities}.contains("Employees")</ns20:conditions>
+    </ns20:rules>
+    <ns20:rules xsi:type="ns20:ACLConditionalRule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <ns20:aclId>4a3682a6-48f7-40e7-8990-54634e0aa42e</ns20:aclId>
+    </ns20:rules>
+</ns20:ACLProxy>

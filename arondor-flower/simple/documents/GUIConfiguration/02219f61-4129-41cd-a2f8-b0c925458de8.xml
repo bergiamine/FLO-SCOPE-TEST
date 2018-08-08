@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document category="DOCUMENT" name="Configuration Enveloppe" xmlns:ns1="http://flower.com/docs/domain/component" xmlns:ns2="http://flower.com/docs/domain/common"
+	xmlns="http://flower.com/docs/domain/document" xmlns:ns3="http://flower.com/docs/domain/acl">
+
+	<ns2:id>02219f61-4129-41cd-a2f8-b0c925458de8</ns2:id>
+
+	<ns1:data>
+		<ns2:creationDate>2015-04-22 12:35:57.444 +0200</ns2:creationDate>
+		<ns2:retentionStartDate>2000-12-12 12:35:57.448 +0100</ns2:retentionStartDate>
+		<ns2:validityCode>INVALID</ns2:validityCode>
+		<ns1:classId>GUIConfiguration</ns1:classId>
+		<ns2:ACL>c563e0e0-ecea-49f1-b634-73771e8b4a81</ns2:ACL>
+		<ns1:status>NEW</ns1:status>
+	</ns1:data>
+
+	<ns1:Tags />
+    
+	<files>
+		<ns2:id>02219f61-4129-41cd-a2f8-b0c925458de8</ns2:id>
+	</files>
+
+</Document>

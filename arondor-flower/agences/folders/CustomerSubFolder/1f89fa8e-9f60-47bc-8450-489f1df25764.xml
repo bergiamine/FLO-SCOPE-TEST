@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Folder category="FOLDER" name="Décomptes" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/task" xmlns:ns19="http://flower.com/docs/domain/virtualFolder" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/componentclass" xmlns:ns6="http://flower.com/docs/domain/scope" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/document" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/folder">
+    <id>1f89fa8e-9f60-47bc-8450-489f1df25764</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2016-01-27 11:09:00.031 +0100</creationDate>
+        <lastUpdateDate>2016-01-29 02:52:20.323 +0100</lastUpdateDate>
+        <ACL>21ef31e8-3072-11e5-a151-feff819cdc9f</ACL>
+        <ns2:classId>CustomerSubFolder</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="Activity" readOnly="false">
+            <ns2:value>Syndic</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="BuildingRef" readOnly="false">
+            <ns2:value>AZ08FK3</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="AgencyRef" readOnly="false">
+            <ns2:value>A</ns2:value>
+        </ns2:tags>
+    </ns2:Tags>
+    <ns3:children>
+        <ns3:references category="DOCUMENT">
+            <id>694cbe8f-ae19-441b-b11d-3c686def6c24</id>
+        </ns3:references>
+    </ns3:children>
+</ns3:Folder>

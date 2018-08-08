@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:TagClass xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/component" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns20="http://flower.com/docs/domain/folder" xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns8="http://flower.com/docs/domain/taskclass" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns13="http://flower.com/docs/domain/report" xmlns:ns9="http://flower.com/docs/domain/task" xmlns:ns12="http://flower.com/docs/domain/workflow" xmlns:ns11="http://flower.com/docs/domain/scope" xmlns:ns22="http://flower.com/docs/domain/fact" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns21="http://flower.com/docs/domain/virtualFolder" xmlns:ns17="http://flower.com/docs/domain/folderclass" xmlns:ns16="http://flower.com/docs/domain/security" xmlns:ns15="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns14="http://flower.com/docs/domain/componentclass" xmlns:ns19="http://flower.com/docs/domain/document" xmlns:ns18="http://flower.com/docs/domain/documentclass">
+    <id>DateCourrier</id>
+    <ns2:data>
+        <owner>system</owner>
+        <creationDate>2017-10-03 23:26:34.238 +0200</creationDate>
+        <lastUpdateDate>2017-04-02 11:44:40.909 +0200</lastUpdateDate>
+    </ns2:data>
+    <ns2:type>DATE</ns2:type>
+    <ns2:pattern></ns2:pattern>
+    <ns2:displayNames language="EN">
+        <ns3:value></ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="FR">
+        <ns3:value>Date du courrier</ns3:value>
+    </ns2:displayNames>
+    <ns2:searchable>true</ns2:searchable>
+</ns2:TagClass>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="homeWidgets" class="com.flower.docs.gui.client.util.SimpleWidgetCatalog">
+		<property name="widgets">
+			<list>
+				<ref bean="tenLastConsultedDocumentWidget" />
+				<!-- <ref bean="tenLastDocumentWidget" /> -->
+				<ref bean="tenLastModifiedDocumentWidget" />
+				<!-- <ref bean="tenLastBillWidget" /> -->
+				<ref bean="homeButton" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="tenLastConsultedDocumentWidget" class="com.flower.docs.gui.client.home.HomeUserSearchPresenter">
+		<property name="property">
+			<value type="com.flower.docs.gui.client.localstorage.LocalPersistentCacheKey">OPENED</value>
+		</property>
+		<property name="description">
+			<list>
+				<bean class="com.flower.docs.domain.i18n.I18NLabel">
+					<property name="language" value="EN" />
+					<property name="value" value="10 last opened documents" />
+				</bean>
+				<bean class="com.flower.docs.domain.i18n.I18NLabel">
+					<property name="language" value="FR" />
+					<property name="value" value="10 last opened documents" />
+				</bean>
+			</list>
+		</property>
+		<property name="search">
+			<bean class="com.flower.docs.domain.search.Search">
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+				</property>
+				<property name="request">
+					<bean class="com.flower.docs.domain.search.SearchRequest">
+						<property name="selectClause">
+							<bean class="com.flower.docs.domain.search.SelectClause">
+								<property name="fields">
+									<list>
+										<value>name</value>
+									</list>
+								</property>
+							</bean>
+						</property>
+						<property name="max" value="10" />
+					</bean>
+				</property>
+				<property name="displayNames">
+					<list>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="EN" />
+							<property name="value" value="10 last opened documents" />
+						</bean>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="FR" />
+							<property name="value" value="1O derniers documents consultés" />
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="tenLastModifiedDocumentWidget" class="com.flower.docs.gui.client.home.HomeUserSearchPresenter">
+		<property name="property">
+			<value type="com.flower.docs.gui.client.localstorage.LocalPersistentCacheKey">UPDATED</value>
+		</property>
+		<property name="description">
+			<list>
+				<bean class="com.flower.docs.domain.i18n.I18NLabel">
+					<property name="language" value="EN" />
+					<property name="value" value="10 last modified documents" />
+				</bean>
+				<bean class="com.flower.docs.domain.i18n.I18NLabel">
+					<property name="language" value="FR" />
+					<property name="value" value="10 derniers documents modifiés" />
+				</bean>
+			</list>
+		</property>
+		<property name="search">
+			<bean class="com.flower.docs.domain.search.Search">
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+				</property>
+				<property name="request">
+					<bean class="com.flower.docs.domain.search.SearchRequest">
+						<property name="selectClause">
+							<bean class="com.flower.docs.domain.search.SelectClause">
+								<property name="fields">
+									<list>
+										<value>name</value>
+									</list>
+								</property>
+							</bean>
+						</property>
+						<property name="max" value="10" />
+						<property name="orderClauses">
+							<list>
+								<bean class="com.flower.docs.domain.search.OrderClause">
+									<property name="name" value="lastUpdateDate" />
+									<property name="ascending" value="false" />
+								</bean>
+							</list>
+						</property>
+					</bean>
+				</property>
+				<property name="displayNames">
+					<list>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="EN" />
+							<property name="value" value="10 last modified documents" />
+						</bean>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="FR" />
+							<property name="value" value="Les 10 derniers documents modifiés" />
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="homeButton" class="com.flower.docs.gui.client.tooltip.FloatingButtonPresenter">
+		<property name="componentCreationShortcuts">
+			<bean id="componentCreationShortcutsForHomeButton" class="java.util.ArrayList">
+				<constructor-arg>
+					<list>
+						<bean class="com.flower.docs.domain.component.ComponentReference">
+							<property name="category">
+								<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+							</property>
+							<property name="id">
+								<bean class="com.flower.docs.domain.common.Id">
+									<property name="value" value="DocumentAgent" />
+								</bean>
+							</property>
+						</bean>
+						<bean class="com.flower.docs.domain.component.ComponentReference">
+							<property name="category">
+								<value type="com.flower.docs.domain.component.Category">VIRTUAL_FOLDER</value>
+							</property>
+							<property name="id">
+								<bean class="com.flower.docs.domain.common.Id">
+									<property name="value" value="DossierAgent" />
+								</bean>
+							</property>
+						</bean>
+						<bean class="com.flower.docs.domain.component.ComponentReference">
+							<property name="category">
+								<value type="com.flower.docs.domain.component.Category">TASK</value>
+							</property>
+							<property name="id">
+								<bean class="com.flower.docs.domain.common.Id">
+									<property name="value" value="NouvelArrivant0" />
+								</bean>
+							</property>
+						</bean>
+					</list>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

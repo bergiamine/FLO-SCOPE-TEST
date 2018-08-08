@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>BillType</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CHOICELIST</type>
+	<pattern></pattern>
+
+	<displayNames language="EN">
+		<ns4:value>Bill type</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Type de facture</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="Bill">
+		<displayNames language="FR">
+			<ns4:value>Facture</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Bill</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Asset">
+		<displayNames language="FR">
+			<ns4:value>Avoir</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Asset</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="ProForma">
+		<displayNames language="FR">
+			<ns4:value>ProForma</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>ProForma</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Appendix">
+		<displayNames language="FR">
+			<ns4:value>Annexe</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Appendix</ns4:value>
+		</displayNames>
+	</allowedValues>
+
+	<searchable>false</searchable>
+
+</TagClass>

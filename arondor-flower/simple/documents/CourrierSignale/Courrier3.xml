@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document category="DOCUMENT" name="Signalement d'un acte de négligence" xmlns:ns1="http://flower.com/docs/domain/component"
+	xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/document" xmlns:ns3="http://flower.com/docs/domain/acl">
+
+	<ns2:id>a50fcbbd-445b-4c5a-975e-46c03e3984a7</ns2:id>
+
+	<ns1:data>
+		<ns2:creationDate>2015-09-09 20:35:57.444 +0200</ns2:creationDate>
+		<ns2:retentionStartDate>2000-12-12 12:35:57.448 +0100</ns2:retentionStartDate>
+		<ns2:validityCode>INVALID</ns2:validityCode>
+		<ns1:classId>CourrierEntrant</ns1:classId>
+		<ns2:ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ns2:ACL>
+	</ns1:data>
+
+	<ns1:Tags>
+		<ns1:tags name="Priority">
+			<ns1:value>2</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Channel">
+			<ns1:value>fax</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Receiver">
+			<ns1:value>M. Durand</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Sender">
+			<ns1:value>M. Dupond</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="ServiceName">
+			<ns1:value>SoinsMedicaux</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="ReceivedDate">
+			<ns1:value>1444646400000</ns1:value>
+		</ns1:tags>
+	</ns1:Tags>
+
+	<files>
+		<ns2:id>33a89a97-cd37-4363-ad31-19d01025dbeb</ns2:id>
+	</files>
+</Document>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>Priority</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>ICON</type>
+	<pattern></pattern>
+
+	<displayNames language="EN">
+		<ns4:value>Priority</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Priorité</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="AllowedValueWithIcon">
+		<icon>tag-column-icon fa-flag green</icon>
+		<displayNames language="FR">
+			<ns4:value>Faible</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Low</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="AllowedValueWithIcon">
+		<icon>tag-column-icon fa-flag orange</icon>
+		<displayNames language="FR">
+			<ns4:value>Normale</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Normal</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="AllowedValueWithIcon">
+		<icon>stacked(tag-column-icon fa-exclamation red,tag-column-icon fa-flag red)</icon>
+		<displayNames language="FR">
+			<ns4:value>Urgente</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Urgent</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="AllowedValueWithIcon">
+		<icon>tag-column-icon fa-flag black</icon>
+		<displayNames language="FR">
+			<ns4:value>Critique</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Critical</ns4:value>
+		</displayNames>
+	</allowedValues>
+
+
+	<searchable>true</searchable>
+
+</TagClass>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns7:DocumentClass category="DOCUMENT" xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/componentclass"
+	xmlns:ns4="http://flower.com/docs/domain/folderclass" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns5="http://flower.com/docs/domain/component"
+	xmlns:ns7="http://flower.com/docs/domain/documentclass">
+
+	<ns2:id>EEnvelope_Attachment</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2016-09-22 17:31:30.163 +0200</ns2:creationDate>
+		<ns2:ACL>acl-e-envelope</ns2:ACL>
+	</data>
+
+	<tagReferences tagName="RefClient" mandatory="true" />
+	<tagReferences tagName="Commentaire" mandatory="false" />
+
+	<displayNames language="EN">
+		<ns3:value>e-Envelope attachment</ns3:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns3:value>Pièce jointe d'une e-Enveloppe</ns3:value>
+	</displayNames>
+
+</ns7:DocumentClass>

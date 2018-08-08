@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common"
+	xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+	
+	<ns2:id>ServiceName</ns2:id>
+	
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+	
+	<type>CHOICELIST</type>
+	<pattern></pattern>
+	
+	<displayNames language="EN">
+		<ns4:value>Service</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Service</ns4:value>
+	</displayNames>
+	
+	<allowedValues symbolicName="HR">
+		<displayNames language="FR">
+			<ns4:value>Ressources Humaines</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Human Resources</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Finance">
+		<displayNames language="FR">
+			<ns4:value>Finance</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Finance</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="BoardDirector">
+		<displayNames language="FR">
+			<ns4:value>Direction Générale</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Board director</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="CustomerRelationship">
+		<displayNames language="FR">
+			<ns4:value>Relation Client</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Customer Relationship</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="SoinsMedicaux">
+		<displayNames language="FR">
+			<ns4:value>Soins médicaux</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Health care</ns4:value>
+		</displayNames>
+	</allowedValues>
+	
+	
+	<searchable>true</searchable>
+	
+</TagClass>

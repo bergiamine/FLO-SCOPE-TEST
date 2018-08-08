@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Document category="DOCUMENT" name="OpenLDAP" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/file" xmlns:ns3="http://flower.com/docs/domain/document" xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns20="http://flower.com/docs/domain/folder" xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns7="http://flower.com/docs/domain/taskclass" xmlns:ns13="http://flower.com/docs/domain/report" xmlns:ns9="http://flower.com/docs/domain/task" xmlns:ns12="http://flower.com/docs/domain/workflow" xmlns:ns11="http://flower.com/docs/domain/scope" xmlns:ns22="http://flower.com/docs/domain/fact" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns21="http://flower.com/docs/domain/virtualFolder" xmlns:ns17="http://flower.com/docs/domain/security" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns15="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/componentclass" xmlns:ns19="http://flower.com/docs/domain/documentclass" xmlns:ns18="http://flower.com/docs/domain/folderclass">
+    <id>74937d55-413d-4b53-881d-4460cf40c848</id>
+    <ns2:data>
+        <owner>system</owner>
+        <creationDate>2017-05-10 17:51:17.347 +0200</creationDate>
+        <lastUpdateDate>2017-06-12 23:57:37.055 +0200</lastUpdateDate>
+        <ACL>c563e0e0-ecea-49f1-b634-73771e8b4a81</ACL>
+        <ns2:classId>LDAPConfiguration</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="BaseDN" readOnly="false">
+            <ns2:value>dc=flower,dc=com</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="User" readOnly="false">
+            <ns2:value>cn=admin,dc=flower,dc=com</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="LDAPType" readOnly="false">
+            <ns2:value>OPENLDAP</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="URL" readOnly="false">
+            <ns2:value>ldap://flowerdocsint.arondor.int:389</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Password" readOnly="false">
+            <ns2:value>okidoki</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="SearchAttribute" readOnly="false">
+            <ns2:value>displayName</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="IdAttribute" readOnly="false">
+            <ns2:value>CN</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="DisplayNameAttribute" readOnly="false">
+            <ns2:value>displayName</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="MembersAttribute" readOnly="false"/>
+    </ns2:Tags>
+</ns3:Document>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Folder category="FOLDER" name="Factures" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/task" xmlns:ns19="http://flower.com/docs/domain/virtualFolder" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/componentclass" xmlns:ns6="http://flower.com/docs/domain/scope" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/document" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/folder">
+    <id>af7c1fa3-3025-4fd1-822c-1a586fe121cb</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2014-04-22 17:52:13.147 +0200</creationDate>
+        <lastUpdateDate>2016-02-09 23:58:35.195 +0100</lastUpdateDate>
+        <ACL>7bb60b83-ccc1-4924-bb65-40c0e432064f</ACL>
+        <ns2:classId>ProjectSubFolder</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="Activity" readOnly="false"/>
+        <ns2:tags name="BuildingRef" readOnly="false"/>
+        <ns2:tags name="AgencyRef" readOnly="false"/>
+    </ns2:Tags>
+    <ns3:children>
+        <ns3:references category="FOLDER">
+            <id>41394f59-925f-4f0d-95ea-bcd40deecbf5</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>e44af1cf-9bdf-4aee-9d66-59e83da45a39</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>75040251-7407-459e-91fc-f08f482bb707</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>fe5df036-4b1e-42f9-a600-d44779bcf893</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>a3c9c9fc-a2d8-4671-85f6-70d093b4cd5a</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>150d2ba4-26d1-4931-9695-65481c9a3a2b</id>
+        </ns3:references>
+    </ns3:children>
+</ns3:Folder>

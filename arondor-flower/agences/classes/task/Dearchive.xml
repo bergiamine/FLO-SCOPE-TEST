@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:TaskClass category="TASK" active="true" xmlns:ns16="http://flower.com/docs/domain/folder" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/documentclass" xmlns:ns14="http://flower.com/docs/domain/virtualFolder" xmlns:ns15="http://flower.com/docs/domain/document" xmlns:ns18="http://flower.com/docs/domain/folderclass" xmlns:ns19="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns9="http://flower.com/docs/domain/reservation" xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns12="http://flower.com/docs/domain/component" xmlns:ns13="http://flower.com/docs/domain/task" xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/scope" xmlns:ns10="http://flower.com/docs/domain/report" xmlns:ns20="http://flower.com/docs/domain/tagclass" xmlns:ns8="http://flower.com/docs/domain/file" xmlns:ns11="http://flower.com/docs/domain/security" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/taskclass" xmlns:ns3="http://flower.com/docs/domain/i18n">
+    <id>Dearchive</id>
+    <ns2:data>
+        <creationDate>2015-08-11 14:45:22.955 +0200</creationDate>
+        <ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ACL>
+    </ns2:data>
+    <ns2:tagReferences tagName="BAL" mandatory="true" multivalued="false" technical="false" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="Comments" mandatory="false" multivalued="false" technical="false" readonly="false" order="1"/>
+    <ns2:displayNames language="FR">
+        <ns3:value>Demander le désarchivage</ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="EN">
+        <ns3:value>Request unarchiving</ns3:value>
+    </ns2:displayNames>
+    <ns4:icon>flower-button fa-archive</ns4:icon>
+
+   <ns4:children category="DOCUMENT" required="NOW" technical="false">
+		<id>CustomerBill</id>
+		<ns4:classId>CustomerBill</ns4:classId>
+		<ns4:displayNames language="FR">
+			<ns3:value>Document à désarchiver</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="EN">
+			<ns3:value>Document to dearchive</ns3:value>
+		</ns4:displayNames>
+	</ns4:children>
+	
+</ns4:TaskClass>

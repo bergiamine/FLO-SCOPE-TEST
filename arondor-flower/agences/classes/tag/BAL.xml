@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>BAL</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>HIERARCHICAL</type>
+
+	<displayNames language="EN">
+		<ns4:value>Target basket(s)</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Boîte(s) aux lettres cibles(s)</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="MyService">
+		<displayNames language="FR">
+			<ns4:value>Mon service / Mon agence</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>My service / My agency</ns4:value>
+		</displayNames>
+
+		<allowedValues symbolicName="ADP2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+			<conditions>${user.authorities}.contains("ADMIN")</conditions>
+			<displayNames language="FR">
+				<ns4:value>ADP2</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>ADP2</ns4:value>
+			</displayNames>
+
+			<allowedValues symbolicName="Generic">
+				<displayNames language="FR">
+					<ns4:value>Générique</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Generique</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Manager">
+				<displayNames language="FR">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Dupond">
+				<displayNames language="FR">
+					<ns4:value>M. Dupond</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>M. Dupond</ns4:value>
+				</displayNames>
+			</allowedValues>
+		</allowedValues>
+
+		<allowedValues symbolicName="ADP3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+			<conditions>${user.authorities}.contains("Employees")</conditions>
+			<displayNames language="FR">
+				<ns4:value>ATP3</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>ATP3</ns4:value>
+			</displayNames>
+
+			<allowedValues symbolicName="Generic">
+				<displayNames language="FR">
+					<ns4:value>Générique</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Generique</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Manager">
+				<displayNames language="FR">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Attestations">
+				<displayNames language="FR">
+					<ns4:value>Attestations</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Attestations</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Paye">
+				<displayNames language="FR">
+					<ns4:value>Paye</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Paye</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="admins" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+				<conditions>${user.authorities}.contains("ADMIN")</conditions>
+				<displayNames language="FR">
+					<ns4:value>Administrateurs</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Administrators</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="employees" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+				<conditions>!${user.authorities}.contains("ADMIN")</conditions>
+				<displayNames language="FR">
+					<ns4:value>Employés</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Employees</ns4:value>
+				</displayNames>
+			</allowedValues>
+		</allowedValues>
+
+	</allowedValues>
+
+	<allowedValues symbolicName="OtherAgencies">
+		<displayNames language="FR">
+			<ns4:value>Autres agences</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Other agencies</ns4:value>
+		</displayNames>
+
+		<allowedValues symbolicName="Boulouris">
+			<displayNames language="FR">
+				<ns4:value>Boulouris</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Boulouris</ns4:value>
+			</displayNames>
+
+			<allowedValues symbolicName="Generic">
+				<displayNames language="FR">
+					<ns4:value>Générique</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Generique</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Manager">
+				<displayNames language="FR">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+			</allowedValues>
+		</allowedValues>
+
+		<allowedValues symbolicName="StMaxime">
+			<displayNames language="FR">
+				<ns4:value>Saint-Maxime</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Saint-Maxime</ns4:value>
+			</displayNames>
+
+			<allowedValues symbolicName="Generic">
+				<displayNames language="FR">
+					<ns4:value>Générique</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Generique</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Manager">
+				<displayNames language="FR">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+			</allowedValues>
+		</allowedValues>
+
+		<allowedValues symbolicName="BorneLesMimosas">
+			<displayNames language="FR">
+				<ns4:value>Borne Les Mimosas</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Borne Les Mimosas</ns4:value>
+			</displayNames>
+
+			<allowedValues symbolicName="Generic">
+				<displayNames language="FR">
+					<ns4:value>Générique</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Generique</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Manager">
+				<displayNames language="FR">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Dupond">
+				<displayNames language="FR">
+					<ns4:value>M. Dupond</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>M. Dupond</ns4:value>
+				</displayNames>
+			</allowedValues>
+		</allowedValues>
+
+	</allowedValues>
+
+
+	<allowedValues symbolicName="OtherServices">
+		<displayNames language="FR">
+			<ns4:value>Autres services</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Other services</ns4:value>
+		</displayNames>
+
+		<allowedValues symbolicName="ADP2">
+			<displayNames language="FR">
+				<ns4:value>ADP2</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>ADP2</ns4:value>
+			</displayNames>
+
+			<allowedValues symbolicName="Generic">
+				<displayNames language="FR">
+					<ns4:value>Générique</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Generique</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Manager">
+				<displayNames language="FR">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Dupond">
+				<displayNames language="FR">
+					<ns4:value>M. Dupond</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>M. Dupond</ns4:value>
+				</displayNames>
+			</allowedValues>
+		</allowedValues>
+
+
+		<allowedValues symbolicName="ADP3">
+			<displayNames language="FR">
+				<ns4:value>ATP3</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>ATP3</ns4:value>
+			</displayNames>
+
+			<allowedValues symbolicName="Generic">
+				<displayNames language="FR">
+					<ns4:value>Générique</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Generique</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Manager">
+				<displayNames language="FR">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Manager</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Attestations">
+				<displayNames language="FR">
+					<ns4:value>Attestations</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Attestations</ns4:value>
+				</displayNames>
+			</allowedValues>
+			<allowedValues symbolicName="Paye">
+				<displayNames language="FR">
+					<ns4:value>Paye</ns4:value>
+				</displayNames>
+				<displayNames language="EN">
+					<ns4:value>Paye</ns4:value>
+				</displayNames>
+			</allowedValues>
+		</allowedValues>
+
+	</allowedValues>
+
+	<searchable>false</searchable>
+
+</TagClass>

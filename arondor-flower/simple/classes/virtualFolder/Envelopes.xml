@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:VirtualFolderClass category="VIRTUAL_FOLDER" active="false" xmlns="http://flower.com/docs/domain/common"
+	xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/search" xmlns:ns3="http://flower.com/docs/domain/i18n"
+	xmlns:ns6="http://flower.com/docs/domain/acl" xmlns:ns20="http://flower.com/docs/domain/virtualFolder" xmlns:ns5="http://flower.com/docs/domain/virtualfolderclass"
+	xmlns:ns8="http://flower.com/docs/domain/component" xmlns:ns7="http://flower.com/docs/domain/taskclass" xmlns:ns13="http://flower.com/docs/domain/fact"
+	xmlns:ns9="http://flower.com/docs/domain/reservation" xmlns:ns12="http://flower.com/docs/domain/report" xmlns:ns11="http://flower.com/docs/domain/file"
+	xmlns:ns10="http://flower.com/docs/domain/scope" xmlns:ns21="http://flower.com/docs/domain/folder" xmlns:ns17="http://flower.com/docs/domain/security"
+	xmlns:ns16="http://flower.com/docs/domain/tagclass" xmlns:ns15="http://flower.com/docs/domain/documentclass" xmlns:ns14="http://flower.com/docs/domain/folderclass"
+	xmlns:ns19="http://flower.com/docs/domain/document" xmlns:ns18="http://flower.com/docs/domain/task">
+	<id>Envelope</id>
+	<ns2:data>
+		<owner>fadmin</owner>
+		<creationDate>2016-09-05 17:08:45.565 +0200</creationDate>
+		<lastUpdateDate>2016-09-06 11:09:02.921 +0200</lastUpdateDate>
+		<ACL>c5c35788-c6af-472f-8ca7-6c20f48e0453</ACL>
+	</ns2:data>
+
+	<ns2:displayNames language="EN">
+		<ns3:value>Enveloppes</ns3:value>
+	</ns2:displayNames>
+	<ns2:displayNames language="FR">
+		<ns3:value>Enveloppes</ns3:value>
+	</ns2:displayNames>
+
+	<ns2:RetentionDuration>
+		<value>0</value>
+		<unit>MONTH</unit>
+	</ns2:RetentionDuration>
+
+	<ns5:searches>
+		<id>2cd5553a-9ac0-4618-8268-5a2aaa42fe20</id>
+		<ns4:category>TASK</ns4:category>
+
+		<ns4:request>
+			<ns4:selectClause>
+				<ns4:fields>reservation</ns4:fields>
+				<ns4:fields>classid</ns4:fields>
+				<ns4:fields>creationDate</ns4:fields>
+				<ns4:fields>Matricule</ns4:fields>
+				<ns4:fields>ServiceName</ns4:fields>
+				<ns4:fields>workflow</ns4:fields>
+				<ns4:fields>assignee</ns4:fields>
+			</ns4:selectClause>
+
+			<ns4:start>0</ns4:start>
+			<ns4:max>10</ns4:max>
+			<ns4:aggregation xsi:type="ns4:FieldAggregation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<ns4:field>ServiceName</ns4:field>
+			</ns4:aggregation>
+		</ns4:request>
+	</ns5:searches>
+
+</ns5:VirtualFolderClass>

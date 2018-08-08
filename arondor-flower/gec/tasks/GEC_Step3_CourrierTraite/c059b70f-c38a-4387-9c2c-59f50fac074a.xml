@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Task category="TASK" name="3-Courrier traite" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/taskclass" xmlns:ns3="http://flower.com/docs/domain/task" xmlns:ns6="http://flower.com/docs/domain/file" xmlns:ns20="http://flower.com/docs/domain/documentclass" xmlns:ns5="http://flower.com/docs/domain/i18n" xmlns:ns8="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/acl" xmlns:ns13="http://flower.com/docs/domain/folder" xmlns:ns9="http://flower.com/docs/domain/reservation" xmlns:ns12="http://flower.com/docs/domain/virtualFolder" xmlns:ns11="http://flower.com/docs/domain/document" xmlns:ns22="http://flower.com/docs/domain/security" xmlns:ns10="http://flower.com/docs/domain/scope" xmlns:ns21="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns17="http://flower.com/docs/domain/componentclass" xmlns:ns16="http://flower.com/docs/domain/fact" xmlns:ns15="http://flower.com/docs/domain/workflow" xmlns:ns14="http://flower.com/docs/domain/report" xmlns:ns19="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/tagclass">
+    <id>c059b70f-c38a-4387-9c2c-59f50fac074a</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2017-10-11 14:36:41.394 +0200</creationDate>
+        <lastUpdateDate>2017-10-11 14:39:23.526 +0200</lastUpdateDate>
+        <ACL>ACL_TASK</ACL>
+        <ns2:classId>GEC_Step3_CourrierTraite</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="CanalEntree" readOnly="false">
+            <ns2:value>2</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="PrenomClient" readOnly="false">
+            <ns2:value>Jean</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="DateCourrier" readOnly="false">
+            <ns2:value>1507725158769</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="RefClient" readOnly="false">
+            <ns2:value>123456</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="NomClient" readOnly="false">
+            <ns2:value>DUPONT</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="ObjetCourrier" readOnly="false">
+            <ns2:value>Informations sur mon assurance auto</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Statut" readOnly="false">
+            <ns2:value>FINALISE</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="ServiceDestinataire" readOnly="false">
+            <ns2:value>JURIDIQUE</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="TypeCourrier" readOnly="false">
+            <ns2:value>DemandeInfo</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Priorite" readOnly="false">
+            <ns2:value>2_NORMALE</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="DelaiTraitement" readOnly="false">
+            <ns2:value>6</ns2:value>
+        </ns2:tags>
+    </ns2:Tags>
+    <ns3:assignee></ns3:assignee>
+    <ns3:workflow>GEC</ns3:workflow>
+    <ns3:participants>fadmin</ns3:participants>
+    <ns3:attachments order="0" category="DOCUMENT">
+        <id>Courrier</id>
+        <ns3:componentIds>c46de78c-92d4-45ef-b262-8395aa76a4a8</ns3:componentIds>
+    </ns3:attachments>
+</ns3:Task>

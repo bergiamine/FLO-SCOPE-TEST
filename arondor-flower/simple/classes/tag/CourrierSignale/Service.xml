@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>Service</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CONDITIONAL</type>
+	<pattern></pattern>
+
+	<displayNames language="EN">
+		<ns4:value>Service</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Service</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="services_for_pole1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.PoleDirection}==Pole1</conditions>
+		<allowedValues symbolicName="Service1_Pole1">
+			<displayNames language="FR">
+				<ns4:value>Services aux professionnels de santé</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Service 1 (Dpt 1)</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="Service2_Pole1">
+			<displayNames language="FR">
+				<ns4:value>Organisation et régulation de l'offre ambulatoire</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Service 2 (Dpt 1)</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<allowedValues symbolicName="services_for_pole2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.PoleDirection}==Pole2</conditions>
+		<allowedValues symbolicName="Service3_Pole2">
+			<displayNames language="FR">
+				<ns4:value>Accompagnement et prise en charge des personnes agées</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Service 3 (Dpt 2)</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="Service4_Pole2">
+			<displayNames language="FR">
+				<ns4:value>Accompagnement et prices en charge des personnes handicapées</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Service 4 (Dpt 2)</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="Service5_Pole2">
+			<displayNames language="FR">
+				<ns4:value>Accompagnement et prise en charge des personnes en diffcultés spécifiques</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Service 4 (Dpt 2)</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<allowedValues symbolicName="services_for_pole3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ConditionalAllowedValue">
+		<conditions>${tags.PoleDirection}==Pole3</conditions>
+		<allowedValues symbolicName="Service6_Pole3">
+			<displayNames language="FR">
+				<ns4:value>Veille et gestion des alertes sanitaires</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Service 3 (Dpt 2)</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="Service7_Pole3">
+			<displayNames language="FR">
+				<ns4:value>Contrôle de sécurité sanitaires des milieux</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Service 4 (Dpt 2)</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<searchable>false</searchable>
+
+</TagClass>

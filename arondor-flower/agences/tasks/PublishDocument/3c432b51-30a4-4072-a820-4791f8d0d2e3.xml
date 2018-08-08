@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Task category="TASK" xmlns:ns16="http://flower.com/docs/domain/componentclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/documentclass" xmlns:ns14="http://flower.com/docs/domain/document" xmlns:ns15="http://flower.com/docs/domain/folder" xmlns:ns18="http://flower.com/docs/domain/folderclass" xmlns:ns19="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns9="http://flower.com/docs/domain/file" xmlns:ns5="http://flower.com/docs/domain/taskclass" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/virtualFolder" xmlns:ns6="http://flower.com/docs/domain/acl" xmlns:ns7="http://flower.com/docs/domain/search" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/tagclass" xmlns:ns8="http://flower.com/docs/domain/scope" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/i18n" xmlns:ns3="http://flower.com/docs/domain/task">
+    <id>3c432b51-30a4-4072-a820-4791f8d0d2e3</id>
+    <ns2:data>
+        <owner>kta</owner>
+        <creationDate>2016-02-09 08:25:37.163 +0100</creationDate>
+        <lastUpdateDate>2016-02-09 08:25:37.279 +0100</lastUpdateDate>
+        <ACL>792693b1-0385-4960-8f85-69ae83fb7a22</ACL>
+        <ns2:classId>PublishDocument</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="Indexator" readOnly="false">
+            <ns2:value>phu</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Comments" readOnly="false"/>
+        <ns2:tags name="PublishTarget" readOnly="false"/>
+        <ns2:tags name="Priority" readOnly="false"/>
+    </ns2:Tags>
+    <ns3:participants>kta</ns3:participants>
+    <ns3:children category="DOCUMENT">
+    	<id>CustomerBill</id>
+        <ns3:componentId>5d89591e-5e5d-4257-9978-d4d1b7fb5f15</ns3:componentId>
+    </ns3:children>
+</ns3:Task>

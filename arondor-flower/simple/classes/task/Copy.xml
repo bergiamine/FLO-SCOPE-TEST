@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:TaskClass category="TASK" active="true" xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/componentclass"
+	xmlns:ns4="http://flower.com/docs/domain/component" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns9="http://flower.com/docs/domain/folderclass"
+	xmlns:ns5="http://flower.com/docs/domain/taskclass" xmlns:ns6="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns7="http://flower.com/docs/domain/search"
+	xmlns:ns8="http://flower.com/docs/domain/documentclass" xmlns:ns10="http://flower.com/docs/domain/componentclass">
+
+	<ns2:id>Copie</ns2:id>
+
+	<data>
+		<ns2:creationDate>2015-08-11 14:45:22.955 +0200</ns2:creationDate>
+		<ns2:ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ns2:ACL>
+	</data>
+
+	<displayNames language="FR">
+		<ns3:value>Copier vers d'autre(s) boîte(s) aux lettres</ns3:value>
+	</displayNames>
+	<displayNames language="EN">
+		<ns3:value>Copy to an other letter box</ns3:value>
+	</displayNames>
+
+	<ns5:icon>flower-button fa-clone</ns5:icon>
+
+	<ns5:children category="DOCUMENT" required="NOW" technical="true">
+		<ns2:id>Attachment1</ns2:id>
+		<ns5:classId>CourrierEntrant</ns5:classId>
+	</ns5:children>
+
+	<tagReferences tagName="BAL" mandatory="true" multivalued="true" order="0" />
+	<tagReferences tagName="Comments" mandatory="false" multivalued="false" order="1" />
+
+</ns5:TaskClass>

@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "0a78bed0-5f5e-11e8-a907-8db9c40a4d72",
+    "_type": "search",
+    "_source": {
+      "title": "Flower_Logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "logLevel",
+        "request",
+        "scope",
+        "user",
+        "class",
+        "Content"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flower-filebeat\",\"query\":{\"query_string\":{\"query\":\"type:flower\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  }
+]

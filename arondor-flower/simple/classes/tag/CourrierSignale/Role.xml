@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>Role</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2015-11-17 00:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CHOICELIST</type>
+	<pattern />
+
+	<displayNames language="FR">
+		<ns4:value>Rôle</ns4:value>
+	</displayNames>
+	<displayNames language="EN">
+		<ns4:value>Role</ns4:value>
+	</displayNames>
+	
+	<allowedValues symbolicName="Role1">
+		<displayNames language="FR">
+			<ns4:value>Agent non cadre</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Non executive agent</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Role2">
+		<displayNames language="FR">
+			<ns4:value>Cadre</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Executive</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Role3">
+		<displayNames language="FR">
+			<ns4:value>Directeur, DT, assimilé</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Director</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Role3">
+		<displayNames language="FR">
+			<ns4:value>Chef de département, unité, pôle</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Department chief</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Role3">
+		<displayNames language="FR">
+			<ns4:value>Médecin</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Doctor</ns4:value>
+		</displayNames>
+	</allowedValues>
+	
+
+	<searchable>false</searchable>
+
+</TagClass>

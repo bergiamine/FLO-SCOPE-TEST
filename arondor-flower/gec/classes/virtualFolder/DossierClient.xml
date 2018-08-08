@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns6:VirtualFolderClass category="VIRTUAL_FOLDER" active="false" technical="false" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/tagclass" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns6="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns20="http://flower.com/docs/domain/folderclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns8="http://flower.com/docs/domain/taskclass" xmlns:ns7="http://flower.com/docs/domain/acl" xmlns:ns13="http://flower.com/docs/domain/file" xmlns:ns9="http://flower.com/docs/domain/component" xmlns:ns12="http://flower.com/docs/domain/scope" xmlns:ns11="http://flower.com/docs/domain/task" xmlns:ns22="http://flower.com/docs/domain/security" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns21="http://flower.com/docs/domain/documentclass" xmlns:ns17="http://flower.com/docs/domain/report" xmlns:ns16="http://flower.com/docs/domain/folder" xmlns:ns15="http://flower.com/docs/domain/virtualFolder" xmlns:ns14="http://flower.com/docs/domain/document" xmlns:ns19="http://flower.com/docs/domain/fact" xmlns:ns18="http://flower.com/docs/domain/workflow">
+    <id>DossierClient</id>
+    <ns2:data>
+        <creationDate>2017-10-11 14:26:26.287 +0200</creationDate>
+        <lastUpdateDate>2017-10-11 14:34:46.112 +0200</lastUpdateDate>
+        <ACL>acl-dossierclient</ACL>
+    </ns2:data>
+    <ns2:tagReferences tagName="RefClient" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="PrenomClient" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="NomClient" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:displayNames language="FR">
+        <ns3:value>Dossier Client</ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="EN">
+        <ns3:value></ns3:value>
+    </ns2:displayNames>
+    <ns2:descriptions language="EN">
+        <ns3:value></ns3:value>
+    </ns2:descriptions>
+    <ns2:descriptions language="FR">
+        <ns3:value></ns3:value>
+    </ns2:descriptions>
+    <ns2:RetentionDuration>
+        <value>0</value>
+        <unit>MONTH</unit>
+    </ns2:RetentionDuration>
+    <ns6:searches>
+        <id>searchDocumentClient</id>
+        <ns5:category>DOCUMENT</ns5:category>
+        <ns5:request>
+            <ns5:selectClause>
+            	<ns5:fields>ObjetCourrier</ns5:fields>
+                <ns5:fields>classid</ns5:fields>
+                <ns5:fields>creationDate</ns5:fields>
+                <ns5:fields>ObjetCourrier</ns5:fields>
+                <ns5:fields>TypeCourrier</ns5:fields>
+                <ns5:fields>CanalEntree</ns5:fields>
+            </ns5:selectClause>
+            <ns5:filterClauses xsi:type="ns5:AndClause" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <ns5:criteria>
+                    <ns5:name>classid</ns5:name>
+                    <ns5:operator>EQUALS_TO</ns5:operator>
+                    <ns5:type>STRING</ns5:type>
+                    <ns5:values>CourrierEntrant</ns5:values>
+                </ns5:criteria>
+                <ns5:criteria>
+                    <ns5:name>RefClient</ns5:name>
+                    <ns5:operator>EQUALS_TO</ns5:operator>
+                    <ns5:type>STRING</ns5:type>
+                    <ns5:values>${tags.RefClient}</ns5:values>
+                </ns5:criteria>
+            </ns5:filterClauses>
+            <ns5:orderClauses>
+                <ns5:name>creationDate</ns5:name>
+                <ns5:type>TIMESTAMP</ns5:type>
+                <ns5:ascending>false</ns5:ascending>
+            </ns5:orderClauses>
+            <ns5:start>0</ns5:start>
+            <ns5:max>10</ns5:max>
+            <ns5:aggregation xsi:type="ns5:FieldAggregation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <ns5:field>TypeCourrier</ns5:field>
+            </ns5:aggregation>
+        </ns5:request>
+        <ns5:displayNames language="EN">
+            <ns3:value></ns3:value>
+        </ns5:displayNames>
+        <ns5:displayNames language="FR">
+            <ns3:value></ns3:value>
+        </ns5:displayNames>
+    </ns6:searches>
+</ns6:VirtualFolderClass>

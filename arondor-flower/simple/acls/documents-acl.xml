@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AccessControlList name="Sécurité par défaut des documents" xmlns="http://flower.com/docs/domain/acl" xmlns:common="http://flower.com/docs/domain/common">
+	<common:id>4a3682a6-48f7-40e7-8990-54634e0aa42e</common:id>
+	<entries>
+		<principal>Employees</principal>
+		<permission>CREATE</permission>
+		<permission>READ</permission>
+		<permission>UPDATE</permission>
+		<permission>READ_CONTENT</permission>
+		<permission>READ_HISTORY</permission>
+		<permission>READ_ANNOTATION</permission>
+		<permission>CREATE_ANNOTATION</permission>
+		<permission>ATTACH</permission>
+		<permission>BUILD_NEW_DOCUMENT</permission>
+		<grant>ALLOW</grant>
+	</entries>
+</AccessControlList>

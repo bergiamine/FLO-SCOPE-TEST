@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:TaskClass category="TASK" active="true" xmlns:ns16="http://flower.com/docs/domain/folder" xmlns="http://flower.com/docs/domain/common"
+	xmlns:ns17="http://flower.com/docs/domain/documentclass" xmlns:ns14="http://flower.com/docs/domain/virtualFolder" xmlns:ns15="http://flower.com/docs/domain/document"
+	xmlns:ns18="http://flower.com/docs/domain/folderclass" xmlns:ns19="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns9="http://flower.com/docs/domain/reservation"
+	xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns12="http://flower.com/docs/domain/component" xmlns:ns13="http://flower.com/docs/domain/task"
+	xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/scope" xmlns:ns10="http://flower.com/docs/domain/report"
+	xmlns:ns20="http://flower.com/docs/domain/tagclass" xmlns:ns8="http://flower.com/docs/domain/file" xmlns:ns11="http://flower.com/docs/domain/security"
+	xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/taskclass" xmlns:ns3="http://flower.com/docs/domain/i18n">
+	<id>EEnvelope_Subscription_Step1_Validation</id>
+	<ns2:data>
+		<creationDate>2015-08-11 14:45:22.955 +0200</creationDate>
+		<ACL>acl-e-envelope</ACL>
+	</ns2:data>
+
+	<ns2:displayNames language="FR">
+		<ns3:value>Validation d'une demande d'adhésion</ns3:value>
+	</ns2:displayNames>
+	<ns2:displayNames language="EN">
+		<ns3:value>Subscription request validation</ns3:value>
+	</ns2:displayNames>
+
+	<ns4:icon>envelope fa-user-plus</ns4:icon>
+	<ns4:workflow>EEnvelope_Subscription</ns4:workflow>
+
+	<ns2:descriptions language="EN">
+		<ns3:value>Validation of a subscription request. If you validate the request, it will be done within 48 hours</ns3:value>
+	</ns2:descriptions>
+	<ns2:descriptions language="FR">
+		<ns3:value>Validation d'une demande d'adhésion. Si vous validez la demande, celle-ci sera effecitve sous 48h</ns3:value>
+	</ns2:descriptions>
+
+	<ns2:tagReferences tagName="ServiceDestinataire" mandatory="true" order="0" />
+	<ns2:tagReferences tagName="RefClient" mandatory="true" order="0" />
+	<ns2:tagReferences tagName="Statut" mandatory="true" technical="true" order="0" />
+	
+	<ns2:tagCategories>InfoEEnvelope</ns2:tagCategories>
+
+	<ns4:children category="DOCUMENT" required="NOW" readonly="true">
+		<id>Attachment1</id>
+		<ns4:classId>EEnvelope_Attachment</ns4:classId>
+		<ns4:displayNames language="EN">
+			<ns3:value>Subscription form</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="FR">
+			<ns3:value>Bulletin d'adhésion</ns3:value>
+		</ns4:displayNames>
+		<ns5:Tags>
+			<ns5:tags name="Commentaire" readOnly="false">
+				<ns5:value>Insérer votre commentaire</ns5:value>
+			</ns5:tags>
+		</ns5:Tags>
+		<ns4:description>Un bulletin d'adhésion doit impérativement être fourni</ns4:description>
+	</ns4:children>
+
+	<ns4:children category="DOCUMENT" required="NOW">
+		<id>Attachment2</id>
+		<ns4:classId>EEnvelope_Attachment</ns4:classId>
+		<ns4:displayNames language="EN">
+			<ns3:value>SEPA</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="FR">
+			<ns3:value>Mandat SEPA</ns3:value>
+		</ns4:displayNames>
+		<ns4:description>Un mandat SEPA doit être ajouté pour finaliser l'adhésion</ns4:description>
+	</ns4:children>
+
+	<ns4:answers>
+		<id>Terminate</id>
+		<ns4:displayNames language="EN">
+			<ns3:value>Terminate</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="FR">
+			<ns3:value>Terminer</ns3:value>
+		</ns4:displayNames>
+	</ns4:answers>
+
+</ns4:TaskClass>

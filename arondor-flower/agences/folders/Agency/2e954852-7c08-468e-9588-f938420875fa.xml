@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Folder category="FOLDER" name="Projet D" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/task" xmlns:ns19="http://flower.com/docs/domain/virtualFolder" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/componentclass" xmlns:ns6="http://flower.com/docs/domain/scope" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/document" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/folder">
+    <id>2e954852-7c08-468e-9588-f938420875fa</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2014-04-22 17:52:13.147 +0200</creationDate>
+        <ACL>060fbfe1-f31a-410d-b5c8-0577c9dfdfce</ACL>
+        <ns2:classId>Agency</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="City" readOnly="false">
+            <ns2:value>Paris</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Address" readOnly="false">
+            <ns2:value>158 bv. du Faubourg Bannier</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="PostalCode" readOnly="false">
+            <ns2:value>33100</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="AgencyRef" readOnly="false">
+            <ns2:value>D</ns2:value>
+        </ns2:tags>
+    </ns2:Tags>
+    <ns3:children/>
+</ns3:Folder>

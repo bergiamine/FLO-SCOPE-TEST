@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="tenLastCreated" class="com.flower.docs.domain.search.SearchRequest">
+		<property name="selectClause">
+			<bean class="com.flower.docs.domain.search.SelectClause">
+				<property name="fields">
+					<list>
+						<value>ObjetCourrier</value>
+					</list>
+				</property>
+			</bean>
+		</property>
+		<property name="max" value="10"/>
+		<property name="orderClauses">
+			<list>
+				<bean class="com.flower.docs.domain.search.OrderClause">
+					<property name="name" value="creationDate"/>
+					<property name="ascending" value="false"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tenLastSeen" class="com.flower.docs.domain.search.SearchRequest">
+		<property name="selectClause">
+			<bean class="com.flower.docs.domain.search.SelectClause">
+				<property name="fields">
+					<list>
+						<value>ObjetCourrier</value>
+					</list>
+				</property>
+			</bean>
+		</property>
+		<property name="max" value="10"/>
+		<property name="orderClauses">
+			<list>
+				<bean class="com.flower.docs.domain.search.OrderClause">
+					<property name="name" value="lastUpdateDate"/>
+					<property name="ascending" value="false"/>
+				</bean>
+			</list>
+		</property>
+		<property name="filterClauses">
+			<list>
+				<bean class="com.flower.docs.domain.search.AndClause">
+					<property name="criteria">
+						<list>
+							<bean class="com.flower.docs.domain.search.Criterion">
+								<property name="name" value="classid" />
+								<property name="type">
+									<value type="com.flower.docs.domain.search.Types">STRING</value>
+								</property>
+								<property name="operator">
+									<value type="com.flower.docs.domain.search.Operators">DIFFERENT</value>
+								</property>
+								<property name="values">
+									<list>
+										<value>GEC_Step0_Creation</value>
+										<value>GEC_Step3_CourrierTraite</value>
+										<value>GEC_Step3_CourrierLu</value>
+									</list>
+								</property>
+							</bean>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<!-- creation widgets affichant les recherches -->
+	<bean id="tenLastCreatedWidget" class="com.flower.docs.gui.client.home.HomeSearchPresenter">
+		<property name="search">
+			<bean class="com.flower.docs.domain.search.Search">
+				<property name="id">
+				    <bean class="com.flower.docs.domain.common.Id">
+				        <property name="value" value="documentSearch" />
+				    </bean>
+				</property>				
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+				</property>
+				<property name="request" ref="tenLastCreated"/>
+				<property name="displayNames">
+					<list>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="EN"/>
+							<property name="value" value="10 last created"/>
+						</bean>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="FR"/>
+							<property name="value" value="10 derniers courriers reçus"/>
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="tenLastSeenWidget" class="com.flower.docs.gui.client.home.HomeSearchPresenter">
+		<property name="search">
+			<bean class="com.flower.docs.domain.search.Search">
+				<property name="id">
+				    <bean class="com.flower.docs.domain.common.Id">
+				        <property name="value" value="pliSearch" />
+				    </bean>
+				</property>
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">TASK</value>
+				</property>
+				<property name="request" ref="tenLastSeen"/>
+				<property name="displayNames">
+					<list>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="EN"/>
+							<property name="value" value="10 last modified"/>
+						</bean>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="FR"/>
+							<property name="value" value="10 derniers courriers à traiter"/>
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="tenLastConsultedCustomerFolderWidget" class="com.flower.docs.gui.client.home.HomeUserSearchPresenter">
+		<property name="property">
+			<value type="com.flower.docs.gui.client.localstorage.LocalPersistentCacheKey">OPENED</value>
+		</property>
+		<property name="description">
+			<list>
+				<bean class="com.flower.docs.domain.i18n.I18NLabel">
+					<property name="language" value="EN" />
+					<property name="value" value="Last opened customer folders" />
+				</bean>
+				<bean class="com.flower.docs.domain.i18n.I18NLabel">
+					<property name="language" value="FR" />
+					<property name="value" value="Les derniers dossiers clients consultés" />
+				</bean>
+			</list>
+		</property>
+		<property name="search">
+			<bean class="com.flower.docs.domain.search.Search">
+				<property name="id">
+				    <bean class="com.flower.docs.domain.common.Id">
+				        <property name="value" value="dossierClientSearch" />
+				    </bean>
+				</property>
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">VIRTUAL_FOLDER</value>
+				</property>
+				<property name="request">
+					<bean class="com.flower.docs.domain.search.SearchRequest">
+						<property name="selectClause">
+							<bean class="com.flower.docs.domain.search.SelectClause">
+								<property name="fields">
+									<list>
+										<value>name</value>
+									</list>
+								</property>
+							</bean>
+						</property>
+						<property name="max" value="10" />
+						<property name="filterClauses">
+							<list>
+								<bean class="com.flower.docs.domain.search.AndClause">
+									<property name="criteria">
+										<list>
+											<bean class="com.flower.docs.domain.search.Criterion">
+												<property name="name" value="classid" />
+												<property name="type">
+													<value type="com.flower.docs.domain.search.Types">STRING</value>
+												</property>
+												<property name="operator">
+													<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+												</property>
+												<property name="values">
+													<list>
+														<value>DossierClient</value>
+													</list>
+												</property>
+											</bean>
+										</list>
+									</property>
+								</bean>
+							</list>
+						</property>
+					</bean>
+				</property>
+				<property name="displayNames">
+					<list>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="EN" />
+							<property name="value" value="Customer folders" />
+						</bean>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="FR" />
+							<property name="value" value="Dossiers clients" />
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="favoritesWidget" class="com.flower.docs.gui.client.preferences.favorite.HomeFavoritesPresenter">
+		<property name="search">
+			<bean class="com.flower.docs.domain.search.Search">
+				<property name="id">
+				    <bean class="com.flower.docs.domain.common.Id">
+				        <property name="value" value="documentSearch" />
+				    </bean>
+				</property>				
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">TASK</value>
+				</property>
+				<property name="request">
+					<bean class="com.flower.docs.domain.search.SearchRequest">
+						<property name="selectClause">
+							<bean class="com.flower.docs.domain.search.SelectClause">
+								<property name="fields">
+									<list>
+										<value>name</value>
+									</list>
+								</property>
+							</bean>
+						</property>
+						<property name="max" value="10" />
+					</bean>
+				</property>
+				<property name="displayNames">
+					<list>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="EN"/>
+							<property name="value" value="My favorites"/>
+						</bean>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="FR"/>
+							<property name="value" value="Mes favoris"/>
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="homeButton" class="com.flower.docs.gui.client.tooltip.FloatingButtonPresenter">
+		<property name="componentCreationShortcuts">
+			<bean id="componentCreationShortcutsForHomeButton" class="java.util.ArrayList">
+				<constructor-arg>
+					<list>
+						<bean class="com.flower.docs.domain.component.ComponentReference">
+							<property name="category">
+								<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+							</property>
+							<property name="id">
+								<bean class="com.flower.docs.domain.common.Id">
+									<property name="value" value="CourrierEntrant" />
+								</bean>
+							</property>
+						</bean>					
+					</list>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="homeWidgets" class="com.flower.docs.gui.client.util.SimpleWidgetCatalog">
+		<property name="widgets">
+			<list>
+				<ref bean="favoritesWidget"/>
+				<ref bean="tenLastConsultedCustomerFolderWidget"/>
+				<ref bean="tenLastCreatedWidget"/>
+				<ref bean="tenLastSeenWidget"/>
+				<ref bean="homeButton"/>
+			</list>
+		</property>
+	</bean>
+		
+</beans>

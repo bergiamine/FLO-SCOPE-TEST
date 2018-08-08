@@ -1,0 +1,176 @@
+[
+  {
+    "_id": "072ccc50-3365-11e8-aed7-3922ca1289b1",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Courriers",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"94a39540-3357-11e8-aed7-3922ca1289b1\",\"panelIndex\":1,\"row\":5,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":4,\"id\":\"826604b0-3359-11e8-aed7-3922ca1289b1\",\"panelIndex\":2,\"row\":5,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"bf041fd0-3357-11e8-aed7-3922ca1289b1\",\"panelIndex\":3,\"row\":5,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"00f17450-3359-11e8-aed7-3922ca1289b1\",\"panelIndex\":4,\"row\":1,\"size_x\":7,\"size_y\":2,\"type\":\"visualization\"},{\"col\":8,\"id\":\"22cba040-335f-11e8-aed7-3922ca1289b1\",\"panelIndex\":5,\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"size_x\":7,\"size_y\":2,\"panelIndex\":6,\"type\":\"visualization\",\"id\":\"f323f4d0-336a-11e8-95e5-ddbb8b764fd3\",\"col\":1,\"row\":3},{\"size_x\":2,\"size_y\":2,\"panelIndex\":7,\"type\":\"visualization\",\"id\":\"6e6e5850-336c-11e8-aa86-5f8c489b7f02\",\"col\":8,\"row\":3}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-4\":{\"vis\":{\"legendOpen\":false}},\"P-6\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-12M",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "cdc0bc40-9960-11e7-8faa-83fb682b86a2",
+    "_type": "visualization",
+    "_source": {
+      "title": "Courriers reçus par jour",
+      "visState": "{\"title\":\"Courriers reçus par jour\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"creationDate\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "de368fb0-995f-11e7-8d8f-ebf0c71a00da",
+    "_type": "visualization",
+    "_source": {
+      "title": "Répartition des courriers",
+      "visState": "{\"title\":\"Répartition des courriers\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"t_Statut\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"t_Statut.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"Statut de traitement\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "35774040-995f-11e7-8d8f-ebf0c71a00da",
+    "_type": "visualization",
+    "_source": {
+      "title": "Nombre de courriers à traiter",
+      "visState": "{\"title\":\"Nombre de courriers à traiter\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":false,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "00f17450-3359-11e8-aed7-3922ca1289b1",
+    "_type": "visualization",
+    "_source": {
+      "title": "Tâches créées par mois",
+      "visState": "{\"title\":\"Tâches créées par mois\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"creationDate\",\"interval\":\"M\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Date de création\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "22cba040-335f-11e8-aed7-3922ca1289b1",
+    "_type": "visualization",
+    "_source": {
+      "title": "Total",
+      "visState": "{\"title\":\"Total\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Tâches\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "94a39540-3357-11e8-aed7-3922ca1289b1",
+    "_type": "visualization",
+    "_source": {
+      "title": "Tâches par service",
+      "visState": "{\"title\":\"Tâches par service\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"t_ServiceDestinataire.keyword\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "bf041fd0-3357-11e8-aed7-3922ca1289b1",
+    "_type": "visualization",
+    "_source": {
+      "title": "Tâches par statut",
+      "visState": "{\"title\":\"Tâches par statut\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"t_Statut.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "6e6e5850-336c-11e8-aa86-5f8c489b7f02",
+    "_type": "visualization",
+    "_source": {
+      "title": "Délai traitement global",
+      "visState": "{\"title\":\"Délai traitement global\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"t_DelaiTraitement\",\"customLabel\":\"Délai moyen (jours)\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "f323f4d0-336a-11e8-95e5-ddbb8b764fd3",
+    "_type": "visualization",
+    "_source": {
+      "title": "Délai de traitement moyen par Mois",
+      "visState": "{\"title\":\"Délai de traitement moyen par Mois\",\"type\":\"line\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"showCircles\":true,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"t_DelaiTraitement\",\"customLabel\":\"Moyenne délai traitement\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"creationDate\",\"interval\":\"M\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "826604b0-3359-11e8-aed7-3922ca1289b1",
+    "_type": "visualization",
+    "_source": {
+      "title": "Tâches par priorité",
+      "visState": "{\"title\":\"Tâches par priorité\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"t_Priorite.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4159a4e0-3359-11e8-aed7-3922ca1289b1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  }
+]

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:DocumentClass category="DOCUMENT" active="false" technical="true" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/tagclass" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns6="http://flower.com/docs/domain/component" xmlns:ns20="http://flower.com/docs/domain/security" xmlns:ns5="http://flower.com/docs/domain/documentclass" xmlns:ns8="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/acl" xmlns:ns13="http://flower.com/docs/domain/scope" xmlns:ns9="http://flower.com/docs/domain/file" xmlns:ns12="http://flower.com/docs/domain/reservation" xmlns:ns11="http://flower.com/docs/domain/task" xmlns:ns22="http://flower.com/docs/domain/folderclass" xmlns:ns10="http://flower.com/docs/domain/taskclass" xmlns:ns21="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns17="http://flower.com/docs/domain/folder" xmlns:ns16="http://flower.com/docs/domain/document" xmlns:ns15="http://flower.com/docs/domain/report" xmlns:ns14="http://flower.com/docs/domain/workflow" xmlns:ns19="http://flower.com/docs/domain/fact" xmlns:ns18="http://flower.com/docs/domain/virtualFolder">
+    <id>LDAPConfiguration</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2017-05-17 12:27:29.309 +0200</creationDate>
+        <lastUpdateDate>2017-06-06 19:28:23.591 +0200</lastUpdateDate>
+        <ACL>c563e0e0-ecea-49f1-b634-73771e8b4a81</ACL>
+    </ns2:data>
+    <ns2:tagReferences tagName="LDAPType" mandatory="true" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="URL" mandatory="true" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>URL d'accès à l'annuaire</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="User" mandatory="true" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Distinguished name de l'administrateur</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="Password" mandatory="true" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Mot de passe de l'administrateur</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="BaseDN" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Noeud racine</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="IdAttribute" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value>ENvalue</ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Attribut utilisé pour déterminer l'identifiant</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="DisplayNameAttribute" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value>ENvalue</ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Attribut utilisé pour déterminer le libellé</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="SearchAttribute" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value>ENvalue</ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Attribut utilisé pour les recherches</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="MembersAttribute" mandatory="false" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value>ENvalue</ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Attribut utilisé pour déterminer les membres d'un groupe</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="CustomAttribute" mandatory="false" multivalued="true" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value>ENvalue</ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Attribut utilisé pour les customAttributes</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:tagReferences tagName="EnableLowerCaseOfUserName" mandatory="false" multivalued="true" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value>Attribute used to enable lower case for username evaluation</ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Attribut utilisé  pour activer l'évaluation de l'identifiant en minuscule</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:displayNames language="EN">
+        <ns3:value>LDAPConfiguration Configuration</ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="FR">
+        <ns3:value>Configuration d'un annuaire d'entreprise</ns3:value>
+    </ns2:displayNames>
+    <ns2:descriptions language="EN">
+        <ns3:value></ns3:value>
+    </ns2:descriptions>
+    <ns2:descriptions language="FR">
+        <ns3:value></ns3:value>
+    </ns2:descriptions>
+    <ns2:RetentionDuration>
+        <value>0</value>
+        <unit>MONTH</unit>
+    </ns2:RetentionDuration>
+</ns5:DocumentClass>

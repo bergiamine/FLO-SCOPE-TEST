@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document category="DOCUMENT" name="Nouvel Arrivant" xmlns:ns1="http://flower.com/docs/domain/component" xmlns:ns2="http://flower.com/docs/domain/common"
+	xmlns="http://flower.com/docs/domain/document" xmlns:ns3="http://flower.com/docs/domain/acl">
+
+	<ns2:id>b8de968f-704f-4b7e-bb86-9ac8ef422229</ns2:id>
+
+	<ns1:data>
+		<ns2:creationDate>2015-11-19 10:10:57.444 +0200</ns2:creationDate>
+		<ns2:retentionStartDate>2000-12-12 12:35:57.448 +0100</ns2:retentionStartDate>
+		<ns2:validityCode>INVALID</ns2:validityCode>
+		<ns1:classId>DocumentAgent</ns1:classId>
+		<ns2:ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ns2:ACL>
+		<ns1:status>NEW</ns1:status>
+	</ns1:data>
+
+	<ns1:Tags>
+		<ns1:tags name="Channel">
+			<ns1:value>registered</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Priority">
+			<ns1:value>1</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Famille">
+			<ns1:value>DocumentsAdministratifs</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Nature">
+			<ns1:value>Unknown</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Matricule">
+			<ns1:value>P0002095</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Name">
+			<ns1:value>Michel Martin</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="EDS">
+			<ns1:value>Boulouris</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="BALId">
+			<ns1:value>Générique</ns1:value>
+		</ns1:tags>
+	</ns1:Tags>
+
+
+	<files>
+		<ns2:id>nouvel_arrivant_P0002095.pdf</ns2:id>
+	</files>
+
+</Document>

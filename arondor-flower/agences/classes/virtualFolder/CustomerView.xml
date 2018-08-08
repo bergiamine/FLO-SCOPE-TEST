@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:VirtualFolderClass category="VIRTUAL_FOLDER" active="false" xmlns:ns16="http://flower.com/docs/domain/document"
+	xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/folder" xmlns:ns14="http://flower.com/docs/domain/task"
+	xmlns:ns15="http://flower.com/docs/domain/virtualFolder" xmlns:ns18="http://flower.com/docs/domain/documentclass" xmlns:ns19="http://flower.com/docs/domain/folderclass"
+	xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns12="http://flower.com/docs/domain/security"
+	xmlns:ns13="http://flower.com/docs/domain/component" xmlns:ns6="http://flower.com/docs/domain/acl" xmlns:ns7="http://flower.com/docs/domain/scope"
+	xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/tagclass" xmlns:ns8="http://flower.com/docs/domain/file"
+	xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/search"
+	xmlns:ns3="http://flower.com/docs/domain/i18n">
+	<id>CustomerView</id>
+	<ns2:data>
+		<owner>fadmin</owner>
+		<creationDate>2016-01-27 15:00:50.966 +0100</creationDate>
+		<lastUpdateDate>2016-02-10 00:11:48.173 +0100</lastUpdateDate>
+		<ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ACL>
+	</ns2:data>
+	<ns2:tagReferences tagName="CustomerId" mandatory="false" multivalued="false" technical="false" readonly="false" order="0" />
+    <ns2:tagReferences tagName="Address" mandatory="false" multivalued="false" technical="false" readonly="false" order="1"/>
+    <ns2:tagReferences tagName="PostalCode" mandatory="false" multivalued="false" technical="false" readonly="false" order="2"/>
+    <ns2:tagReferences tagName="City" mandatory="false" multivalued="false" technical="false" readonly="false" order="3"/>
+    
+    <ns2:tagCategories>address</ns2:tagCategories>
+    
+	<ns2:displayNames language="EN">
+		<ns3:value>View of a customer</ns3:value>
+	</ns2:displayNames>
+	<ns2:displayNames language="FR">
+		<ns3:value>Vue d'un fournisseur</ns3:value>
+	</ns2:displayNames>
+	<ns2:RetentionDuration>
+		<value>0</value>
+		<unit>MONTH</unit>
+	</ns2:RetentionDuration>
+	<ns5:searches>
+		<id>CustomerViewSearch</id>
+		<ns4:category>DOCUMENT</ns4:category>
+		<ns4:request>
+			<ns4:selectClause>
+				<ns4:fields>name</ns4:fields>
+				<ns4:fields>BillId</ns4:fields>
+				<ns4:fields>classid</ns4:fields>
+				<ns4:fields>creationDate</ns4:fields>
+				<ns4:fields>lastUpdateDate</ns4:fields>
+				<ns4:fields>Comments</ns4:fields>
+			</ns4:selectClause>
+			<ns4:filterClauses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:AndClause">
+				<ns4:criteria>
+					<ns4:name>CustomerId</ns4:name>
+					<ns4:operator>DIFFERENT</ns4:operator>
+					<ns4:type>STRING</ns4:type>
+					<ns4:values>CustomerBill</ns4:values>
+				</ns4:criteria>
+				<ns4:criteria>
+					<ns4:name>classid</ns4:name>
+					<ns4:operator>EQUALS_TO</ns4:operator>
+					<ns4:type>STRING</ns4:type>
+					<ns4:values>${tags.CustomerId}</ns4:values>
+				</ns4:criteria>
+			</ns4:filterClauses>
+			<ns4:start>0</ns4:start>
+			<ns4:max>50</ns4:max>
+		</ns4:request>
+		<ns4:displayNames language="EN">
+			<ns3:value>Correspondances</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="FR">
+			<ns3:value>Correspondances</ns3:value>
+		</ns4:displayNames>
+	</ns5:searches>
+	<ns5:searches>
+		<id>CustomerViewSearch2</id>
+		<ns4:category>DOCUMENT</ns4:category>
+		<ns4:request>
+			<ns4:selectClause>
+				<ns4:fields>name</ns4:fields>
+				<ns4:fields>BillId</ns4:fields>
+				<ns4:fields>classid</ns4:fields>
+				<ns4:fields>creationDate</ns4:fields>
+				<ns4:fields>lastUpdateDate</ns4:fields>
+				<ns4:fields>Comments</ns4:fields>
+			</ns4:selectClause>
+			<ns4:filterClauses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:AndClause">
+				<ns4:criteria>
+					<ns4:name>CustomerId</ns4:name>
+					<ns4:operator>EQUALS_TO</ns4:operator>
+					<ns4:type>STRING</ns4:type>
+					<ns4:values>${tags.CustomerId}</ns4:values>
+				</ns4:criteria>
+			</ns4:filterClauses>
+			<ns4:start>0</ns4:start>
+			<ns4:max>50</ns4:max>
+			<ns4:aggregation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:FieldAggregation">
+				<ns4:field>BuildingRef</ns4:field>
+				<ns4:nested xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:FieldAggregation">
+					<ns4:field>Year</ns4:field>
+				</ns4:nested>
+			</ns4:aggregation>
+		</ns4:request>
+		<ns4:displayNames language="EN">
+			<ns3:value>Search</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="FR">
+			<ns3:value> Search   </ns3:value>
+		</ns4:displayNames>
+	</ns5:searches>
+</ns5:VirtualFolderClass>

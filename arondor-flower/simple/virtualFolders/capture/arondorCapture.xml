@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:VirtualFolder category="VIRTUAL_FOLDER" name="Arondor Capture" xmlns:ns2="http://flower.com/docs/domain/common"
+	xmlns="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/search" xmlns:ns3="http://flower.com/docs/domain/virtualFolder"
+	xmlns:ns5="http://flower.com/docs/domain/i18n" xmlns:ns6="http://flower.com/docs/domain/document" xmlns:ns7="http://flower.com/docs/domain/folder">
+	<ns2:id>284a206e-2c26-41b9-ba82-c3a1d5a63aeb</ns2:id>
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2015-07-26 22:13:06.796 +0200</ns2:creationDate>
+		<classId>DefaultVirtualFolder</classId>
+		<ns2:ACL>c5c35788-c6af-472f-8ca7-6c20f48e0453</ns2:ACL>
+	</data>
+
+	<ns3:children>faa95799-3607-47c1-a968-ba4da81542ff</ns3:children>
+	<ns3:children>db499d1f-29e9-4abf-b950-fe05f1011081</ns3:children>
+</ns3:VirtualFolder>

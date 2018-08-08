@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactsList xmlns:ns2="http://flower.com/docs/domain/fact" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/common" xmlns:ns6="http://flower.com/docs/domain/i18n" xmlns:ns20="http://flower.com/docs/domain/folderclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns8="http://flower.com/docs/domain/component" xmlns:ns7="http://flower.com/docs/domain/taskclass" xmlns:ns13="http://flower.com/docs/domain/document" xmlns:ns9="http://flower.com/docs/domain/reservation" xmlns:ns12="http://flower.com/docs/domain/file" xmlns:ns23="http://flower.com/docs/domain/security" xmlns:ns11="http://flower.com/docs/domain/scope" xmlns:ns22="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns10="http://flower.com/docs/domain/task" xmlns:ns21="http://flower.com/docs/domain/documentclass" xmlns:ns17="http://flower.com/docs/domain/workflow" xmlns:ns16="http://flower.com/docs/domain/report" xmlns:ns15="http://flower.com/docs/domain/folder" xmlns:ns14="http://flower.com/docs/domain/virtualFolder" xmlns:ns19="http://flower.com/docs/domain/tagclass" xmlns:ns18="http://flower.com/docs/domain/componentclass">
+    <fact>
+        <ns3:id>f245f07d-851f-4cd8-984a-4fac12173ba9</ns3:id>
+        <ns2:objectType>TASK</ns2:objectType>
+        <ns2:objectId>5e75384b-375d-4939-be1a-68b64312749a</ns2:objectId>
+        <ns2:user>fadmin</ns2:user>
+        <ns2:action>UPDATE</ns2:action>
+        <ns2:creationDate>2017-10-11 14:38:41.747 +0200</ns2:creationDate>
+        <ns2:updatedFields>
+            <ns3:name>creationDate</ns3:name>
+            <ns3:value>2017-10-11 14:33:33.692 +0200</ns3:value>
+        </ns2:updatedFields>
+        <ns2:updatedFields>
+            <ns3:name>lastUpdateDate</ns3:name>
+            <ns3:value>2017-10-11 14:38:41.561 +0200</ns3:value>
+        </ns2:updatedFields>
+        <ns2:updatedFields>
+            <ns3:name>name</ns3:name>
+            <ns3:value>1-A distribuer</ns3:value>
+        </ns2:updatedFields>
+    </fact>
+    <fact>
+        <ns3:id>0fa22336-f00b-46eb-912f-420f5d8d6a6f</ns3:id>
+        <ns2:objectType>TASK</ns2:objectType>
+        <ns2:objectId>5e75384b-375d-4939-be1a-68b64312749a</ns2:objectId>
+        <ns2:user>fadmin</ns2:user>
+        <ns2:action>UPDATE</ns2:action>
+        <ns2:creationDate>2017-10-11 14:38:42.677 +0200</ns2:creationDate>
+        <ns2:updatedFields>
+            <ns3:name>creationDate</ns3:name>
+            <ns3:value>2017-10-11 14:33:33.692 +0200</ns3:value>
+        </ns2:updatedFields>
+        <ns2:updatedFields>
+            <ns3:name>lastUpdateDate</ns3:name>
+            <ns3:value>2017-10-11 14:38:42.551 +0200</ns3:value>
+        </ns2:updatedFields>
+        <ns2:updatedFields>
+            <ns3:name>name</ns3:name>
+            <ns3:value>2-A traiter</ns3:value>
+        </ns2:updatedFields>
+    </fact>
+    <fact>
+        <ns3:id>fe7a7b12-e3ef-4439-96f1-5347f31a7740</ns3:id>
+        <ns2:objectType>TASK</ns2:objectType>
+        <ns2:objectId>5e75384b-375d-4939-be1a-68b64312749a</ns2:objectId>
+        <ns2:user>fadmin</ns2:user>
+        <ns2:action>UPDATE</ns2:action>
+        <ns2:creationDate>2017-10-11 14:36:40.493 +0200</ns2:creationDate>
+        <ns2:updatedFields>
+            <ns3:name>creationDate</ns3:name>
+            <ns3:value>2017-10-11 14:33:33.692 +0200</ns3:value>
+        </ns2:updatedFields>
+        <ns2:updatedFields>
+            <ns3:name>lastUpdateDate</ns3:name>
+            <ns3:value>2017-10-11 14:36:40.135 +0200</ns3:value>
+        </ns2:updatedFields>
+        <ns2:updatedFields>
+            <ns3:name>name</ns3:name>
+            <ns3:value>1-A distribuer</ns3:value>
+        </ns2:updatedFields>
+    </fact>
+</FactsList>

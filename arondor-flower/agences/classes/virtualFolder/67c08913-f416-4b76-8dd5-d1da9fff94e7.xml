@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:VirtualFolderClass category="VIRTUAL_FOLDER" active="false" xmlns:ns16="http://flower.com/docs/domain/document" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/folder" xmlns:ns14="http://flower.com/docs/domain/task" xmlns:ns15="http://flower.com/docs/domain/virtualFolder" xmlns:ns18="http://flower.com/docs/domain/documentclass" xmlns:ns19="http://flower.com/docs/domain/folderclass" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/component" xmlns:ns6="http://flower.com/docs/domain/acl" xmlns:ns7="http://flower.com/docs/domain/scope" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/tagclass" xmlns:ns8="http://flower.com/docs/domain/file" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/search" xmlns:ns3="http://flower.com/docs/domain/i18n">
+    <id>67c08913-f416-4b76-8dd5-d1da9fff94e7</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2015-10-24 20:31:30.163 +0200</creationDate>
+        <lastUpdateDate>2016-02-09 22:59:25.748 +0100</lastUpdateDate>
+        <ACL>c5c35788-c6af-472f-8ca7-6c20f48e0453</ACL>
+    </ns2:data>
+    <ns2:tagReferences tagName="Assignee" mandatory="false" multivalued="false" technical="false" readonly="false" order="0"/>
+    <ns2:displayNames language="EN">
+        <ns3:value>Assigned tasks tab</ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="FR">
+        <ns3:value>Tâches assignées (onglet)</ns3:value>
+    </ns2:displayNames>
+    <ns2:RetentionDuration>
+        <value>0</value>
+        <unit>MONTH</unit>
+    </ns2:RetentionDuration>
+    <ns5:searches>
+    	<id>AssignedTasksTabSearch</id>
+        <ns4:category>TASK</ns4:category>
+        <ns4:request>
+			<ns4:selectClause>
+				<ns4:fields>Priority</ns4:fields>
+				<ns4:fields>name</ns4:fields>
+				<ns4:fields>BillId</ns4:fields>
+				<ns4:fields>CustomerId</ns4:fields>
+				<ns4:fields>classid</ns4:fields>
+				<ns4:fields>creationDate</ns4:fields>
+				<ns4:fields>lastUpdateDate</ns4:fields>
+				<ns4:fields>BillStatus</ns4:fields>
+				<ns4:fields>Comments</ns4:fields>
+			</ns4:selectClause>
+			<ns4:filterClauses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:AndClause">
+				<ns4:criteria>
+					<ns4:name>assignee</ns4:name>
+					<ns4:operator>EQUALS_TO</ns4:operator>
+					<ns4:type>STRING</ns4:type>
+					<ns4:values>${tags.Assignee}}</ns4:values>
+				</ns4:criteria>
+			</ns4:filterClauses>
+			<ns4:orderClauses>
+				<ns4:name>Priority</ns4:name>
+				<ns4:type>STRING</ns4:type>
+				<ns4:ascending>false</ns4:ascending>
+			</ns4:orderClauses>
+			<ns4:start>0</ns4:start>
+			<ns4:max>50</ns4:max>
+		</ns4:request>
+    </ns5:searches>
+</ns5:VirtualFolderClass>

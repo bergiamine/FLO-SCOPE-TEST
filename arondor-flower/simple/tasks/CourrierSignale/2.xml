@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Task category="TASK" name="3/3 Courrier signalé à instruire" xmlns:ns16="http://flower.com/docs/domain/virtualFolder" xmlns="http://flower.com/docs/domain/common"
+	xmlns:ns17="http://flower.com/docs/domain/folder" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/tagclass"
+	xmlns:ns18="http://flower.com/docs/domain/document" xmlns:ns9="http://flower.com/docs/domain/reservation" xmlns:ns5="http://flower.com/docs/domain/taskclass"
+	xmlns:ns12="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns13="http://flower.com/docs/domain/folderclass" xmlns:ns6="http://flower.com/docs/domain/acl"
+	xmlns:ns7="http://flower.com/docs/domain/search" xmlns:ns10="http://flower.com/docs/domain/scope" xmlns:ns8="http://flower.com/docs/domain/file"
+	xmlns:ns11="http://flower.com/docs/domain/componentclass" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/task">
+	<id>16953ab9-13b1-4dfc-82c1-50bb7cd4f588</id>
+	<ns2:data>
+		<owner>fadmin</owner>
+		<creationDate>2015-11-18 19:09:14.719 +0100</creationDate>
+		<ACL>792693b1-0385-4960-8f85-69ae83fb7a22</ACL>
+		<ns2:classId>CourrierSignale3</ns2:classId>
+		<ns2:status>NEW</ns2:status>
+	</ns2:data>
+	<ns2:Tags>
+		<ns2:tags name="ProcessingPeriod" readOnly="true">
+			<ns2:value>60</ns2:value>
+		</ns2:tags>
+		<ns2:tags name="RemainingTime" readOnly="true">
+			<ns2:value>28</ns2:value>
+		</ns2:tags>
+		<ns2:tags name="Channel" readOnly="true">
+			<ns2:value>registered</ns2:value>
+		</ns2:tags>
+		<ns2:tags name="Priority" readOnly="false">
+			<ns2:value>2</ns2:value>
+		</ns2:tags>
+		<ns2:tags name="DateAcceptation" readOnly="false">
+			<ns2:value>1445464800000</ns2:value>
+		</ns2:tags>
+		<ns2:tags name="PoleDirection" readOnly="false">
+			<ns2:value>Pole2</ns2:value>
+		</ns2:tags>
+		<ns2:tags name="Service" readOnly="false">
+			<ns2:value>Service5_Pole2</ns2:value>
+		</ns2:tags>
+		<ns2:tags name="Redactor" readOnly="false">
+			<ns2:value>user</ns2:value>
+		</ns2:tags>
+
+	</ns2:Tags>
+<!-- 	<ns3:children category="DOCUMENT"> -->
+<!-- 		<id>1de092f9-a36d-4f1f-8669-20f63c580aba</id> -->
+<!-- 	</ns3:children> -->
+</ns3:Task>

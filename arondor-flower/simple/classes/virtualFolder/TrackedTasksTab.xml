@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:VirtualFolderClass category="VIRTUAL_FOLDER" active="false" xmlns:ns2="http://flower.com/docs/domain/common"
+	xmlns="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns3="http://flower.com/docs/domain/i18n"
+	xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns6="http://flower.com/docs/domain/component" xmlns:ns7="http://flower.com/docs/domain/folderclass"
+	xmlns:ns8="http://flower.com/docs/domain/documentclass">
+
+	<ns2:id>TrackedTasksTab</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2015-10-24 20:31:30.163 +0200</ns2:creationDate>
+		<ns2:ACL>c5c35788-c6af-472f-8ca7-6c20f48e0453</ns2:ACL>
+	</data>
+
+	<displayNames language="EN">
+		<ns3:value>Tracked tasks tab</ns3:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns3:value>Tâches suivies (onglet)</ns3:value>
+	</displayNames>
+
+
+	<ns4:searches>
+		<ns2:id>TrackedTasksTabSearch</ns2:id>
+		<ns5:category>TASK</ns5:category>
+
+		<ns5:request>
+			<ns5:start>0</ns5:start>
+			<ns5:max>50</ns5:max>
+
+			<ns5:selectClause>
+				<ns5:fields>name</ns5:fields>
+				<ns5:fields>creationDate</ns5:fields>
+				<ns5:fields>classid</ns5:fields>
+				<ns5:fields>assignee</ns5:fields>
+				<ns5:fields>Comments</ns5:fields>
+				<ns5:fields>assignee</ns5:fields>
+				<ns5:fields>assignee</ns5:fields>
+			</ns5:selectClause>
+			
+			<ns5:filterClauses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns5:AndClause">
+				<ns5:criteria>
+					<ns5:name>participants</ns5:name>
+					<ns5:operator>CONTAINS</ns5:operator>
+					<ns5:type>STRING</ns5:type>
+					<ns5:values>${user.id}</ns5:values>
+				</ns5:criteria>
+			</ns5:filterClauses>
+			
+			<ns5:orderClauses>
+				<ns5:name>Priority</ns5:name>
+				<ns5:type>STRING</ns5:type>
+				<ns5:ascending>false</ns5:ascending>
+			</ns5:orderClauses>
+		</ns5:request>
+	</ns4:searches>
+
+
+</ns4:VirtualFolderClass>

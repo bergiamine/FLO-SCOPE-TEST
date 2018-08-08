@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document category="DOCUMENT" name="Candidature spontanée CV" xmlns:ns1="http://flower.com/docs/domain/component" xmlns:ns2="http://flower.com/docs/domain/common"
+	xmlns="http://flower.com/docs/domain/document" xmlns:ns3="http://flower.com/docs/domain/acl">
+
+	<ns2:id>9sd5fd3-51e1-4658-90df-d01238c13d11</ns2:id>
+
+	<ns1:data>
+		<ns2:creationDate>2013-04-22 12:35:57.444 +0200</ns2:creationDate>
+		<ns2:retentionStartDate>2000-12-12 12:35:57.448 +0100</ns2:retentionStartDate>
+		<ns2:validityCode>INVALID</ns2:validityCode>
+		<ns1:classId>CourrierEntrant</ns1:classId>
+		<ns2:ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ns2:ACL>
+	</ns1:data>
+
+	<ns1:Tags>
+		<ns1:tags name="Receiver">
+			<ns1:value></ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Sender">
+			<ns1:value>Michel Martin</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="ServiceName">
+			<ns1:value>HR</ns1:value>
+		</ns1:tags>
+	</ns1:Tags>
+
+	<files>
+		<ns2:id>c71d8044-a214-4a3e-bdcf-df1aa2ae67fb</ns2:id>
+	</files>
+
+</Document>

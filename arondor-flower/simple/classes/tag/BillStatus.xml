@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>BillStatus</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2004-07-30 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>FREELIST</type>
+	<pattern />
+
+	<displayNames language="EN">
+		<ns4:value>Status</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Statut</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="Validated">
+		<displayNames language="FR">
+			<ns4:value>Validée</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Validated</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="Refused">
+		<displayNames language="FR">
+			<ns4:value>Refusée</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Refused</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="InProgress">
+		<displayNames language="FR">
+			<ns4:value>En cours</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>In progress</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="processed">
+		<displayNames language="FR">
+			<ns4:value>Traitée</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Processed</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<searchable>false</searchable>
+
+</TagClass>

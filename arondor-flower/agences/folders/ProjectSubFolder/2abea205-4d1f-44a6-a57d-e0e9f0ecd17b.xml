@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Folder category="FOLDER" name="Documentation" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/task" xmlns:ns19="http://flower.com/docs/domain/virtualFolder" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/componentclass" xmlns:ns6="http://flower.com/docs/domain/scope" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/document" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/folder">
+    <id>2abea205-4d1f-44a6-a57d-e0e9f0ecd17b</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2016-01-27 16:58:34.434 +0100</creationDate>
+        <lastUpdateDate>2016-03-15 01:49:12.267 +0100</lastUpdateDate>
+        <ACL>21ef31e8-3072-11e5-a151-feff819cdc9f</ACL>
+        <ns2:classId>ProjectSubFolder</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="Activity" readOnly="false">
+            <ns2:value>Syndic</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="BuildingRef" readOnly="false">
+            <ns2:value>AZ08FK3</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="AgencyRef" readOnly="false">
+            <ns2:value>A</ns2:value>
+        </ns2:tags>
+    </ns2:Tags>
+    <ns3:children>
+        <ns3:references category="DOCUMENT">
+            <id>b5fc29e1-9630-4c93-9492-45848acc2975</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>4ece2a7b-c517-4e21-a859-cbc805b77166</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>bb983647-fe21-421b-924a-a8c1a9e71601</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>c05158d7-6a58-4862-bcf3-3fd21d92d612</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>ad19fed1-0114-4210-9d52-1494565dc59b</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>868dee2a-1ad2-4126-90c2-590029ef7abf</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>8627a600-f98c-43d2-b180-514184d22b14</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>d6570614-dbc5-496b-b274-e9467bb19627</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>0998dc9a-10d8-4fa5-9a20-c1598e34e274</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>5622811d-1a77-419f-878d-5c69b818320f</id>
+        </ns3:references>
+        <ns3:references category="DOCUMENT">
+            <id>693d5fd8-638e-44cc-95a1-427a4a45d7f5</id>
+        </ns3:references>
+    </ns3:children>
+</ns3:Folder>

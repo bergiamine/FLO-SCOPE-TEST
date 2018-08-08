@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>ValidationStatus</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2015-10-19 22:32:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CONDITIONAL</type>
+
+	<displayNames language="EN">
+		<ns4:value>Validation status</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Statut de validation</ns4:value>
+	</displayNames>
+
+<!-- 	<allowedValues xsi:type="ConditionalAllowedValue" symbolicName="natures_for_presentation_immeubleXX" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> -->
+<!-- 		<allowedValues symbolicName="ToVerify"> -->
+<!-- 			<displayNames language="FR"> -->
+<!-- 				<ns4:value>A vérifier</ns4:value> -->
+<!-- 			</displayNames> -->
+<!-- 			<displayNames language="EN"> -->
+<!-- 				<ns4:value>To verify XX</ns4:value> -->
+<!-- 			</displayNames> -->
+<!-- 		</allowedValues> -->
+<!-- 		<allowedValues symbolicName="DGValidation"> -->
+<!-- 			<displayNames language="FR"> -->
+<!-- 				<ns4:value>Validation par la DG</ns4:value> -->
+<!-- 			</displayNames> -->
+<!-- 			<displayNames language="EN"> -->
+<!-- 				<ns4:value>HQ validation XX</ns4:value> -->
+<!-- 			</displayNames> -->
+<!-- 		</allowedValues> -->
+<!-- 		<allowedValues symbolicName="Payment"> -->
+<!-- 			<displayNames language="FR"> -->
+<!-- 				<ns4:value>Paiement</ns4:value> -->
+<!-- 			</displayNames> -->
+<!-- 			<displayNames language="EN"> -->
+<!-- 				<ns4:value>Payment WW</ns4:value> -->
+<!-- 			</displayNames> -->
+<!-- 		</allowedValues> -->
+<!-- 	</allowedValues> -->
+	
+	
+	<allowedValues xsi:type="ConditionalAllowedValue" symbolicName="natures_for_presentation_immeuble" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<conditions>${data.classid}==SubscriptionEnvelope</conditions>
+		<allowedValues symbolicName="ToVerify">
+			<displayNames language="FR">
+				<ns4:value>A vérifier</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>To verify</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="DGValidation">
+			<displayNames language="FR">
+				<ns4:value>Validation par la DG</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>HQ validation</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="Payment">
+			<displayNames language="FR">
+				<ns4:value>Paiement</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Payment</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<allowedValues xsi:type="ConditionalAllowedValue" symbolicName="natures_for_presentation_immeuble" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<conditions>${data.classid}==ClaimEnvelope</conditions>
+		<allowedValues symbolicName="Paid">
+			<displayNames language="FR">
+				<ns4:value>Payée</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Paid</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="Refused">
+			<displayNames language="FR">
+				<ns4:value>Refusée</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Refused</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<searchable>true</searchable>
+
+</TagClass>

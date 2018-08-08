@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Folder category="FOLDER" name="Immeuble A" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/task" xmlns:ns19="http://flower.com/docs/domain/virtualFolder" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/componentclass" xmlns:ns6="http://flower.com/docs/domain/scope" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/document" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/folder">
+    <id>652179f3-a69e-4dc3-b2c8-d9858a3c7c30</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2014-04-22 17:52:13.147 +0200</creationDate>
+        <lastUpdateDate>2016-03-15 01:46:50.023 +0100</lastUpdateDate>
+        <ACL>eea2e877-5b2b-41f3-8cba-9bde4a49724c</ACL>
+        <ns2:classId>Project</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="City" readOnly="false">
+            <ns2:value>Paris</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Activity" readOnly="false">
+            <ns2:value>Syndic</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="AddressCplt" readOnly="false">
+            <ns2:value>Code: 45003</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Designation" readOnly="false">
+            <ns2:value>Project Bellange</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="BuildingRef" readOnly="false">
+            <ns2:value>ImmeubleA</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Address" readOnly="false">
+            <ns2:value>24 rue Guilhem</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="PostalCode" readOnly="false">
+            <ns2:value>75011</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="AgencyRef" readOnly="false">
+            <ns2:value>A</ns2:value>
+        </ns2:tags>
+    </ns2:Tags>
+    <ns3:children>
+        <ns3:references category="FOLDER">
+            <id>33723945-826f-430e-83d5-683a03116730</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>af7c1fa3-3025-4fd1-822c-1a586fe121cb</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>32a20ac3-b214-4897-8321-08ac104da6e4</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>cf6c804c-4a70-410b-a75a-c374403e83be</id>
+        </ns3:references>
+        <ns3:references category="FOLDER">
+            <id>2abea205-4d1f-44a6-a57d-e0e9f0ecd17b</id>
+        </ns3:references>
+    </ns3:children>
+</ns3:Folder>

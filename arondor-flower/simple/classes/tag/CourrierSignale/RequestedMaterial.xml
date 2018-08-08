@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+
+	<ns2:id>RequestedMaterial</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2015-18-30 11:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>HIERARCHICAL</type>
+
+	<displayNames language="EN">
+		<ns4:value>Requested material</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Matériel demandé</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="fixed_elements">
+		<displayNames language="FR">
+			<ns4:value>Eléments fixes</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Fixed elements</ns4:value>
+		</displayNames>
+
+		<allowedValues symbolicName="desktop_computer">
+			<displayNames language="FR">
+				<ns4:value>Ordinateur fixe</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Desktop computer</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="fixed_phone">
+			<displayNames language="FR">
+				<ns4:value>Téléphone fixe</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Mobile work</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="printer">
+			<displayNames language="FR">
+				<ns4:value>Imprimante</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Printer</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<allowedValues symbolicName="laptop">
+		<displayNames language="FR">
+			<ns4:value>Ordinateur portable</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Laptop</ns4:value>
+		</displayNames>
+
+		<allowedValues symbolicName="cadre_laptop">
+			<displayNames language="FR">
+				<ns4:value>Cadre</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Executive</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="mobile_work_laptop">
+			<displayNames language="FR">
+				<ns4:value>En situation de travail mobile</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Mobile work</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="other_laptop">
+			<displayNames language="FR">
+				<ns4:value>Autre raison</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Other reason</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<allowedValues symbolicName="screen">
+		<displayNames language="FR">
+			<ns4:value>Ecran</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Screen</ns4:value>
+		</displayNames>
+
+		<allowedValues symbolicName="standard_screen">
+			<displayNames language="FR">
+				<ns4:value>Standard (19")</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Standard</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="big_screen">
+			<displayNames language="FR">
+				<ns4:value>Taille supérieure</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Big</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="additional_screen">
+			<displayNames language="FR">
+				<ns4:value>Supplémentaire (17")</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Additional (17")</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<allowedValues symbolicName="RemoteAccess">
+		<displayNames language="FR">
+			<ns4:value>Moyen d'accès distant</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Remote access way</ns4:value>
+		</displayNames>
+
+		<allowedValues symbolicName="strongAuthentication">
+			<displayNames language="FR">
+				<ns4:value>Calculette d'authentification forte</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Strong authentication dongle</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="3G">
+			<displayNames language="FR">
+				<ns4:value>Carte ou clef 3G</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>3G dongle</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<allowedValues symbolicName="MobilePhone">
+		<displayNames language="FR">
+			<ns4:value>Téléphone mobile</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Mobile phone</ns4:value>
+		</displayNames>
+
+		<allowedValues symbolicName="director_mobile">
+			<displayNames language="FR">
+				<ns4:value>Directeur, DT, assimilé</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Director</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="agent_mobile">
+			<displayNames language="FR">
+				<ns4:value>Agent communication, logistique, SI</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Communication agent, logistic, IT</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="chief_dpt_mobile">
+			<displayNames language="FR">
+				<ns4:value>Chef de département, unité, pôle</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Department chief</ns4:value>
+			</displayNames>
+		</allowedValues>
+		<allowedValues symbolicName="other_mobile">
+			<displayNames language="FR">
+				<ns4:value>Autre raison</ns4:value>
+			</displayNames>
+			<displayNames language="EN">
+				<ns4:value>Other reason</ns4:value>
+			</displayNames>
+		</allowedValues>
+	</allowedValues>
+
+	<searchable>false</searchable>
+
+</TagClass>

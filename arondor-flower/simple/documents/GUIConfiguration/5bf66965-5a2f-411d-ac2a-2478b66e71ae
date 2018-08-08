@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="goBackRedirection" class="com.flower.docs.gui.client.action.redirect.ReloadRedirectionStrategy" />
+
+	<bean id="updateContenPermissionEnabling" class="com.flower.docs.gui.client.component.action.ComponentPermissionEnablingStrategy">
+		<constructor-arg>
+			<value type="com.flower.docs.domain.acl.Permission">UPDATE_CONTENT</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="openARender" class="com.flower.docs.gui.client.action.CustomizedAction">
+		<property name="name" value="VisualizeDocument" />
+		<property name="title" value="Visulisation du document" />
+		<property name="icon" value="fa-eye" />
+		<property name="url"
+			value="http://localhost:8080/flower-docs-arender/ARender.jsp?scope=Syldavia&amp;docId=${component.id_value}&amp;token=${user.token}" />
+		<property name="allowedClasses">
+			<list>
+				<bean class="com.flower.docs.domain.common.Id">
+					<property name="value" value="CourrierEntrant" />
+				</bean>
+			</list>
+		</property>
+		<property name="phase">
+			<list>
+				<value type="com.flower.docs.domain.componentclass.Phase">INSERT</value>
+				<value type="com.flower.docs.domain.componentclass.Phase">MODIFY</value>
+			</list>
+		</property>
+		<property name="principal">
+			<list>
+				<value>ADMIN</value>
+				<value>adg</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="openARenderSite" class="com.flower.docs.gui.client.action.CustomizedAction">
+		<property name="name" value="OpenARender" />
+		<property name="title" value="Ouverture du site ARender" />
+		<property name="icon" value="fa-file-o" />
+		<property name="url" value="http://arender.fr" />
+		<property name="allowedClasses">
+			<list>
+				<bean class="com.flower.docs.domain.common.Id">
+					<property name="value" value="CourrierEntrant" />
+				</bean>
+			</list>
+		</property>
+		<property name="phase">
+			<list>
+				<value type="com.flower.docs.domain.componentclass.Phase">INSERT</value>
+				<value type="com.flower.docs.domain.componentclass.Phase">MODIFY</value>
+			</list>
+		</property>
+		<property name="principal"> 
+			<list>
+				<value>ADMIN</value>
+				<value>adg</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="customizedActions" class="com.flower.docs.gui.client.action.CustomizedActionCatalog">
+		<property name="actions">
+			<list>
+				<ref bean="openARender" />
+				<ref bean="openARenderSite" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

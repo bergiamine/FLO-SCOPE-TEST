@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<bean id="mainLayout" class="com.flower.docs.gui.client.layout.MainLayoutPresenter">
+		<property name="componentCreationShortcuts">
+			<list>
+				<bean class="com.flower.docs.domain.component.ComponentReference">
+					<property name="category">
+						<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+					</property>
+					<property name="id">
+						<bean class="com.flower.docs.domain.common.Id">
+							<property name="value" value="DocumentToIndex" />
+						</bean>
+					</property>
+				</bean>
+				<bean class="com.flower.docs.domain.component.ComponentReference">
+					<property name="category">
+						<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+					</property>
+					<property name="id">
+						<bean class="com.flower.docs.domain.common.Id">
+							<property name="value" value="EmailToIndex" />
+						</bean>
+					</property>
+				</bean>
+				<bean class="com.flower.docs.domain.component.ComponentReference">
+					<property name="category">
+						<value type="com.flower.docs.domain.component.Category">VIRTUAL_FOLDER</value>
+					</property>
+					<property name="id">
+						<bean class="com.flower.docs.domain.common.Id">
+							<property name="value" value="TenantFolder" />
+						</bean>
+					</property>
+				</bean>
+				<bean class="com.flower.docs.domain.component.ComponentReference">
+					<property name="category">
+						<value type="com.flower.docs.domain.component.Category">TASK</value>
+					</property>
+					<property name="id">
+						<bean class="com.flower.docs.domain.common.Id">
+							<property name="value" value="CourrierSignale0" />
+						</bean>
+					</property>
+				</bean>
+			</list>
+		</property>
+		<property name="quickBoxEnable" value="${gui.client.quickbox.enable:false}" />
+		<property name="quickBoxPlace" ref="quickBoxPlace" />
+	</bean>
+
+	<bean id="Locataires" class="com.flower.docs.gui.client.search.ComponentSearchPresenter" scope="prototype">
+		<property name="title" value="Recherche de dossier locataire"/>
+		<property name="categorySelectorPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.item.FakeCategorySelectorPresenter">
+				<property name="value">
+					<value type="com.flower.docs.domain.component.Category">VIRTUAL_FOLDER</value>
+				</property>
+			</bean>
+		</property>
+		<property name="keywordCriteriaPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.KeywordCriteriaPresenter">
+				<property name="enabled" value="false" />
+			</bean>
+		</property>
+		<property name="advancedCriteriaPresenter">
+			<bean class="com.flower.docs.gui.client.search.criteria.advanced.AdvancedCriteriaPresenter">
+				<property name="enabled" value="true" />
+				<property name="displayClassSelector" value="false" />
+				<property name="showSearchButton" value="true" />
+				<property name="searchButtonTitle" value="Trouver" />
+				<property name="forceOpen" value="true" />
+				<property name="fixedCriterionPresenters">
+					<list>
+						<ref bean="tenantNameCriterionPresenter" />
+					</list>
+				</property>
+			</bean>
+		</property>
+		<property name="hiddenColumns">
+			<list>
+				<value>status</value>
+			</list>
+		</property>
+		<property name="hiddenRequest">
+			<bean class="com.flower.docs.domain.search.SearchRequest">
+				<property name="selectClause">
+					<bean class="com.flower.docs.domain.search.SelectClause">
+						<property name="fields">
+							<list>
+								<value>name</value>
+								<value>classid</value>
+								<value>creationDate</value>
+								<value>name</value>
+							</list>
+						</property>
+					</bean>
+				</property>
+
+				<property name="filterClauses">
+					<list>
+						<bean class="com.flower.docs.domain.search.AndClause">
+							<property name="criteria">
+								<list>
+									<bean class="com.flower.docs.domain.search.Criterion">
+										<property name="name" value="classid" />
+										<property name="type">
+											<value type="com.flower.docs.domain.search.Types">STRING</value>
+										</property>
+										<property name="operator">
+											<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+										</property>
+										<property name="values">
+											<list>
+												<value>TenantFolder</value>
+											</list>
+										</property>
+									</bean>
+								</list>
+							</property>
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="tenantNameCriterionPresenter" class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="forceMonovalued" value="true" />
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="TenantName" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- End of Locataires template search -->
+
+
+	<bean id="NameCriterionPresenter" class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="name" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="BuildingRefCriterionPresenter" class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="BuildingRef" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>	
+	<!-- End of CoPro template search -->
+	
+	<bean id="BillIdCriterionPresenter" class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="BillId" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CustomerIdCriterionPresenter" class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="CustomerId" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="YearCriterionPresenter" class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="Year" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="MonthCriterionPresenter" class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="Month" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="BillStatusCriterionPresenter" class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="BillStatus" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- End of Bill template search -->
+	
+
+	<bean id="componentActivityConfigurations" class="com.flower.docs.gui.client.component.activity.ComponentActivityConfigurations">
+		<property name="activityConfigurations">
+			<map>
+				<entry>
+					<key>
+						<ref bean="documentModifyContext" />
+					</key>
+					<bean class="com.flower.docs.gui.client.component.activity.ComponentActivityConfiguration">
+						<property name="leftPanelWidthRatio" value="0.25f" />
+						<property name="detailsOnLeft" value="true" />
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<ref bean="virtualFolderModifyContext" />
+					</key>
+					<bean class="com.flower.docs.gui.client.component.activity.ComponentActivityConfiguration">
+						<property name="leftPanelWidthRatio" value="0.30f" />
+						<property name="useAlternativeView" value="true"/>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+<!--
+	<bean id="tagCategoryCatalog" class="com.flower.docs.gui.client.component.tags.category.TagCategoryCatalog" scope="singleton">
+		<property name="configuration">
+			<map>
+				<entry>
+					<key>
+						<value>CustomerBill</value>
+					</key>
+					<bean class="com.flower.docs.gui.client.component.tags.category.TagCategories">
+						<property name="categories">
+							<list>
+								<ref bean="billStateCategory" />
+								<ref bean="accountingCategory"/>
+							</list>
+						</property>
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<value>OraliaDocument</value>
+					</key>
+					<bean class="com.flower.docs.gui.client.component.tags.category.TagCategories">
+						<property name="categories">
+							<list>
+								<ref bean="documentClassementCategory"/>
+							</list>
+						</property>
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<value>OtherDocument</value>
+					</key>
+					<bean class="com.flower.docs.gui.client.component.tags.category.TagCategories">
+						<property name="categories">
+							<list>
+								<ref bean="documentClassementCategory"/>
+							</list>
+						</property>
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<value>Project</value>
+					</key>
+					<bean class="com.flower.docs.gui.client.component.tags.category.TagCategories">
+						<property name="categories">
+							<list>
+								<ref bean="AddressCategory"/>
+							</list>
+						</property>
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<value>Customer</value>
+					</key>
+					<bean class="com.flower.docs.gui.client.component.tags.category.TagCategories">
+						<property name="categories">
+							<list>
+								<ref bean="AddressCategory"/>
+							</list>
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="billStateCategory" class="com.flower.docs.gui.client.component.tags.category.TagCategory">
+		<property name="name" value="Etat" />
+		<property name="icon" value="flower-button header-icon fa-archive flat-red" />
+		<property name="description" value="Etat de la facture" />
+		<property name="references">
+			<list>
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="BillStatus" />
+				</bean>
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="Priority" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="accountingCategory" class="com.flower.docs.gui.client.component.tags.category.TagCategory">
+		<property name="name" value="Facturation" />
+		<property name="icon" value="flower-button header-icon fa-archive orange" />
+		<property name="description" value="Informations liées à la facturation" />
+		<property name="references">
+			<list>
+				
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="BillId" />
+				</bean>
+
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="CustomerId" />
+				</bean>
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="Montant" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="documentClassementCategory" class="com.flower.docs.gui.client.component.tags.category.TagCategory">
+		<property name="name" value="Classement" />
+		<property name="icon" value="flower-button header-icon fa-archive flat-red" />
+
+		<property name="references">
+			<list>
+				
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="BuildingRef" />
+				</bean>
+
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="Family" />
+				</bean>
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="Montant" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="AddressCategory" class="com.flower.docs.gui.client.component.tags.category.TagCategory">
+		<property name="name" value="Adresse" />
+		<property name="icon" value="flower-button header-icon fa-map-marker flat-red" />
+		<property name="references">
+			<list>
+				
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="Address" />
+				</bean>
+
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="AddressCplt" />
+				</bean>
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="PostalCode" />
+				</bean>
+				<bean class="com.flower.docs.domain.tagclass.TagReference">
+					<property name="tagName" value="City" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+-->
+	<bean id="homeWidgets" class="com.flower.docs.gui.client.util.SimpleWidgetCatalog">
+		<property name="widgets">
+			<list>
+				<ref bean="tenLastDocumentWidget" />
+				<ref bean="tenLastModifiedDocumentWidget" />
+			</list>
+		</property>
+	</bean>
+
+	
+	<bean id="tenLastDocumentWidget" class="com.flower.docs.gui.client.home.HomeSearchPresenter">
+		<property name="description" value="Les dix derniers documents insérés en GED" />
+		<property name="search">
+			<bean class="com.flower.docs.domain.search.Search">
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+				</property>
+				<property name="request">
+					<bean class="com.flower.docs.domain.search.SearchRequest">
+						<property name="criteria">
+							<list>
+								<bean class="com.flower.docs.domain.search.Criterion">
+									<property name="name" value="name" />
+									<property name="type">
+										<value type="com.flower.docs.domain.search.Types">STRING</value>
+									</property>
+									<property name="operator">
+										<value type="com.flower.docs.domain.search.Operators">DISPLAY</value>
+									</property>
+								</bean>
+							</list>
+						</property>
+						<property name="max" value="10" />
+						<property name="order">
+							<bean class="com.flower.docs.domain.search.OrderClause">
+								<property name="name" value="creationDate" />
+								<property name="ascending" value="false" />
+							</bean>
+						</property>
+					</bean>
+				</property>
+				<property name="displayNames">
+					<list>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="EN" />
+							<property name="value" value="10 last documents" />
+						</bean>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="FR" />
+							<property name="value" value="Les 10 derniers documents" />
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="tenLastModifiedDocumentWidget" class="com.flower.docs.gui.client.home.HomeSearchPresenter">
+		<property name="description" value="Les dix derniers documents modifiés en GED" />
+		<property name="search">
+			<bean class="com.flower.docs.domain.search.Search">
+				<property name="category">
+					<value type="com.flower.docs.domain.component.Category">DOCUMENT</value>
+				</property>
+				<property name="request">
+					<bean class="com.flower.docs.domain.search.SearchRequest">
+						<property name="criteria">
+							<list>
+								<bean class="com.flower.docs.domain.search.Criterion">
+									<property name="name" value="name" />
+									<property name="type">
+										<value type="com.flower.docs.domain.search.Types">STRING</value>
+									</property>
+									<property name="operator">
+										<value type="com.flower.docs.domain.search.Operators">DISPLAY</value>
+									</property>
+								</bean>
+							</list>
+						</property>
+						<property name="max" value="10" />
+						<property name="order">
+							<bean class="com.flower.docs.domain.search.OrderClause">
+								<property name="name" value="lastUpdateDate" />
+								<property name="ascending" value="false" />
+							</bean>
+						</property>
+					</bean>
+				</property>
+				<property name="displayNames">
+					<list>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="EN" />
+							<property name="value" value="10 last modified documents" />
+						</bean>
+						<bean class="com.flower.docs.domain.i18n.I18NLabel">
+							<property name="language" value="FR" />
+							<property name="value" value="Les 10 derniers documents modifiés" />
+						</bean>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+<bean id="dataCriteriaCatalog" class="com.flower.docs.gui.client.search.SearchableFieldCatalog">
+		<property name="documentSearchableData">
+			<list>
+			</list>
+		</property>
+		<property name="virtualFolderSearchableData">
+			<list>
+			</list>
+		</property>
+		<property name="folderSearchableData">
+			<list>
+			</list>
+		</property>
+		<property name="taskSearchableData">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+</beans>
+

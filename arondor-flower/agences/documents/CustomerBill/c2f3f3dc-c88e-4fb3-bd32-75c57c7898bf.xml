@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Document category="DOCUMENT" name="Facture 5" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/task" xmlns:ns19="http://flower.com/docs/domain/virtualFolder" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/componentclass" xmlns:ns6="http://flower.com/docs/domain/scope" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/folder" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/document">
+    <id>c2f3f3dc-c88e-4fb3-bd32-75c57c7898bf</id>
+    <ns2:data>
+        <owner>phu</owner>
+        <creationDate>2016-02-09 23:59:49.824 +0100</creationDate>
+        <lastUpdateDate>2016-02-09 23:59:49.824 +0100</lastUpdateDate>
+        <ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ACL>
+        <ns2:classId>CustomerBill</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="CustomerId" readOnly="false">
+            <ns2:value>Orange</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="BillId" readOnly="false">
+            <ns2:value>5</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="BillStatus" readOnly="false">
+            <ns2:value>EnCours</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Priority" readOnly="false">
+            <ns2:value>4</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="BillType" readOnly="false">
+            <ns2:value>Autre</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Year" readOnly="false">
+            <ns2:value>2016</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Montant" readOnly="false">
+            <ns2:value>321</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="BuildingRef" readOnly="false">
+            <ns2:value>ImmeubleA</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Month" readOnly="false">
+            <ns2:value>Janvier</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="AgencyRef" readOnly="false"/>
+        <ns2:tags name="DateEcheance" readOnly="false">
+            <ns2:value>1454626800000</ns2:value>
+        </ns2:tags>
+    </ns2:Tags>
+    <ns3:files>09acfdcb-f64d-4a36-9b14-b2007d661a69</ns3:files>
+</ns3:Document>

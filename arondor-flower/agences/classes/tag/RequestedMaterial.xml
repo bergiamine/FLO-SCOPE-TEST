@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:TagClass xmlns:ns16="http://flower.com/docs/domain/folder" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/componentclass" xmlns:ns14="http://flower.com/docs/domain/virtualFolder" xmlns:ns15="http://flower.com/docs/domain/document" xmlns:ns18="http://flower.com/docs/domain/documentclass" xmlns:ns19="http://flower.com/docs/domain/folderclass" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/task" xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/scope" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns8="http://flower.com/docs/domain/file" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/component" xmlns:ns3="http://flower.com/docs/domain/i18n">
+    <id>RequestedMaterial</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2016-06-30 11:54:36.199 +0200</creationDate>
+    </ns2:data>
+    <ns2:type>HIERARCHICAL</ns2:type>
+    <ns2:allowedValues symbolicName="fixed_elements">
+        <ns2:displayNames language="FR">
+            <ns3:value>Eléments fixes</ns3:value>
+        </ns2:displayNames>
+        <ns2:displayNames language="EN">
+            <ns3:value>Fixed elements</ns3:value>
+        </ns2:displayNames>
+        <ns2:allowedValues symbolicName="desktop_computer">
+            <ns2:displayNames language="FR">
+                <ns3:value>Ordinateur fixe</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Desktop computer</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="fixed_phone">
+            <ns2:displayNames language="FR">
+                <ns3:value>Téléphone fixe</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Mobile work</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="printer">
+            <ns2:displayNames language="FR">
+                <ns3:value>Imprimante</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Printer</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+    </ns2:allowedValues>
+    <ns2:allowedValues symbolicName="laptop">
+        <ns2:displayNames language="FR">
+            <ns3:value>Ordinateur portable</ns3:value>
+        </ns2:displayNames>
+        <ns2:displayNames language="EN">
+            <ns3:value>Laptop</ns3:value>
+        </ns2:displayNames>
+        <ns2:allowedValues symbolicName="cadre_laptop">
+            <ns2:displayNames language="FR">
+                <ns3:value>Cadre</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Executive</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="mobile_work_laptop">
+            <ns2:displayNames language="FR">
+                <ns3:value>En situation de travail mobile</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Mobile work</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="other_laptop">
+            <ns2:displayNames language="FR">
+                <ns3:value>Autre raison</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Other reason</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+    </ns2:allowedValues>
+    <ns2:allowedValues symbolicName="screen">
+        <ns2:displayNames language="FR">
+            <ns3:value>Ecran</ns3:value>
+        </ns2:displayNames>
+        <ns2:displayNames language="EN">
+            <ns3:value>Screen</ns3:value>
+        </ns2:displayNames>
+        <ns2:allowedValues symbolicName="standard_screen">
+            <ns2:displayNames language="FR">
+                <ns3:value>Standard (19")</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Standard</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="big_screen">
+            <ns2:displayNames language="FR">
+                <ns3:value>Taille supérieure</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Big</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="additional_screen">
+            <ns2:displayNames language="FR">
+                <ns3:value>Supplémentaire (17")</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Additional (17")</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+    </ns2:allowedValues>
+    <ns2:allowedValues symbolicName="RemoteAccess">
+        <ns2:displayNames language="FR">
+            <ns3:value>Moyen d'accès distant</ns3:value>
+        </ns2:displayNames>
+        <ns2:displayNames language="EN">
+            <ns3:value>Remote access way</ns3:value>
+        </ns2:displayNames>
+        <ns2:allowedValues symbolicName="strongAuthentication">
+            <ns2:displayNames language="FR">
+                <ns3:value>Calculette d'authentification forte</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Strong authentication dongle</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="3G">
+            <ns2:displayNames language="FR">
+                <ns3:value>Carte ou clef 3G</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>3G dongle</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+    </ns2:allowedValues>
+    <ns2:allowedValues symbolicName="MobilePhone">
+        <ns2:displayNames language="FR">
+            <ns3:value>Téléphone mobile</ns3:value>
+        </ns2:displayNames>
+        <ns2:displayNames language="EN">
+            <ns3:value>Mobile phone</ns3:value>
+        </ns2:displayNames>
+        <ns2:allowedValues symbolicName="director_mobile">
+            <ns2:displayNames language="FR">
+                <ns3:value>Directeur, DT, assimilé</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Director</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="agent_mobile">
+            <ns2:displayNames language="FR">
+                <ns3:value>Agent communication, logistique, SI</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Communication agent, logistic, IT</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="chief_dpt_mobile">
+            <ns2:displayNames language="FR">
+                <ns3:value>Chef de département, unité, pôle</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Department chief</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+        <ns2:allowedValues symbolicName="other_mobile">
+            <ns2:displayNames language="FR">
+                <ns3:value>Autre raison</ns3:value>
+            </ns2:displayNames>
+            <ns2:displayNames language="EN">
+                <ns3:value>Other reason</ns3:value>
+            </ns2:displayNames>
+        </ns2:allowedValues>
+    </ns2:allowedValues>
+    <ns2:displayNames language="EN">
+        <ns3:value>Requested material</ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="FR">
+        <ns3:value>Matériel demandé</ns3:value>
+    </ns2:displayNames>
+    <ns2:searchable>false</ns2:searchable>
+</ns2:TagClass>

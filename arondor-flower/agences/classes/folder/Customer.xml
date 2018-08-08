@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:FolderClass category="FOLDER" active="false" xmlns:ns16="http://flower.com/docs/domain/document" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/folder" xmlns:ns14="http://flower.com/docs/domain/task" xmlns:ns15="http://flower.com/docs/domain/virtualFolder" xmlns:ns18="http://flower.com/docs/domain/documentclass" xmlns:ns19="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/component" xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/scope" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/tagclass" xmlns:ns8="http://flower.com/docs/domain/file" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/folderclass" xmlns:ns3="http://flower.com/docs/domain/i18n">
+    <id>Customer</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2015-12-12 16:31:30.163 +0100</creationDate>
+        <lastUpdateDate>2016-03-15 01:46:19.325 +0100</lastUpdateDate>
+        <ACL>a1058d46-321b-4896-9ab8-ab0a466f7fda</ACL>
+    </ns2:data>
+    <ns2:tagReferences tagName="AgencyRef" mandatory="false" multivalued="false" technical="true" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="Activity" mandatory="false" multivalued="false" technical="true" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="BuildingRef" mandatory="false" multivalued="false" technical="true" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="CustomerId" mandatory="true" multivalued="false" technical="true" readonly="true" order="0"/>
+    <ns2:tagReferences tagName="Name" mandatory="false" multivalued="false" technical="true" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="Address" mandatory="false" multivalued="false" technical="true" readonly="false" order="1"/>
+    <ns2:tagReferences tagName="AddressCplt" mandatory="false" multivalued="false" technical="true" readonly="false" order="1"/>
+    <ns2:tagReferences tagName="City" mandatory="false" multivalued="false" technical="true" readonly="false" order="2"/>
+    <ns2:tagReferences tagName="PostalCode" mandatory="false" multivalued="false" technical="true" readonly="false" order="3"/>
+    <ns2:displayNames language="EN">
+        <ns3:value>Provider</ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="FR">
+        <ns3:value>Fournisseur</ns3:value>
+    </ns2:displayNames>
+    <ns2:RetentionDuration>
+        <value>0</value>
+        <unit>MONTH</unit>
+    </ns2:RetentionDuration>
+    <ns2:children category="FOLDER">
+        <id>CustomerSubFolder</id>
+    </ns2:children>
+    <ns2:children category="DOCUMENT">
+        <id>CustomerBill</id>
+    </ns2:children>
+    <ns2:children category="DOCUMENT">
+        <id>CoPropietaireDocument</id>
+    </ns2:children>
+    <ns2:children category="DOCUMENT">
+        <id>Convocation</id>
+    </ns2:children>
+    <ns2:children category="DOCUMENT">
+        <id>Correspondance</id>
+    </ns2:children>
+</ns4:FolderClass>

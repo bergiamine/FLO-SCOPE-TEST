@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document category="DOCUMENT" name="Courrier entrant 3" xmlns:ns1="http://flower.com/docs/domain/component" xmlns:ns2="http://flower.com/docs/domain/common"
+	xmlns="http://flower.com/docs/domain/document" xmlns:ns3="http://flower.com/docs/domain/acl">
+
+	<ns2:id>0c0f7cee-d864-4b1d-a3e1-79b96db61c57</ns2:id>
+
+	<ns1:data>
+		<ns2:creationDate>2015-04-22 12:35:57.444 +0200</ns2:creationDate>
+		<ns2:retentionStartDate>2000-12-12 12:35:57.448 +0100</ns2:retentionStartDate>
+		<ns2:validityCode>INVALID</ns2:validityCode>
+		<ns1:classId>DocumentAgent</ns1:classId>
+		<ns2:ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ns2:ACL>
+		<ns1:status>CLOSE</ns1:status>
+	</ns1:data>
+
+	<ns1:Tags>
+		<ns1:tags name="Channel">
+			<ns1:value>courrier</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Priority">
+			<ns1:value>2</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Famille">
+			<ns1:value>ContratsEtAnnexes</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Nature">
+			<ns1:value>BMMobilite</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Matricule">
+			<ns1:value>P0002094</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="Name">
+			<ns1:value>Richard Bullit</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="EDS">
+			<ns1:value>Boulouris</ns1:value>
+		</ns1:tags>
+		<ns1:tags name="BALId">
+			<ns1:value>Manager</ns1:value>
+		</ns1:tags>
+	</ns1:Tags>
+
+	<files>
+		<ns2:id>e6db3b18-54dc-430c-9648-06535e38da83</ns2:id>
+	</files>
+
+</Document>

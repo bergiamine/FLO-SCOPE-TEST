@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:TaskClass category="TASK" active="true" xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/componentclass"
+	xmlns:ns4="http://flower.com/docs/domain/component" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns9="http://flower.com/docs/domain/folderclass"
+	xmlns:ns5="http://flower.com/docs/domain/taskclass" xmlns:ns6="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns7="http://flower.com/docs/domain/search"
+	xmlns:ns8="http://flower.com/docs/domain/documentclass">
+
+	<ns2:id>NouvelArrivant0</ns2:id>
+
+	<data>
+		<ns2:creationDate>2015-11-12 15:02:22.955 +0200</ns2:creationDate>
+		<ns2:ACL>792693b1-0385-4960-8f85-69ae83fb7a22</ns2:ACL>
+	</data>
+
+	<displayNames language="FR">
+		<ns3:value>Demande nouvel arrivant</ns3:value>
+	</displayNames>
+	<displayNames language="EN">
+		<ns3:value>Material for new employee</ns3:value>
+	</displayNames>
+
+	<ns5:icon>flower-button fa-male</ns5:icon>
+
+	<tagReferences tagName="TypeDemandeAttribution" mandatory="true" multivalued="false" order="0" />
+	<tagReferences tagName="Matricule" mandatory="true" multivalued="false" order="1" />
+	<tagReferences tagName="Name" mandatory="true" multivalued="false" order="1" />
+	<tagReferences tagName="EndDate" mandatory="true" multivalued="false" order="2" />
+	<tagReferences tagName="PoleDirection" mandatory="false" order="3" />
+	<tagReferences tagName="Service" mandatory="false" order="4" />
+	<tagReferences tagName="Role" mandatory="true" order="5" />
+	<tagReferences tagName="Mobilite" mandatory="true" order="5" />
+	<tagReferences tagName="Office" mandatory="false" order="6" />
+	<tagReferences tagName="Comments" mandatory="false" multivalued="false" order="8" />
+
+</ns5:TaskClass>

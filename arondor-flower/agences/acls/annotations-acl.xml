@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AccessControlList name="Sécurité par défaut des annotations" xmlns="http://flower.com/docs/domain/acl"
+	xmlns:common="http://flower.com/docs/domain/common">
+	<common:id>annotations-acl</common:id>
+	<entries>
+		<principal>Employees</principal>
+		<principal>ADMIN</principal>
+		<permission>CREATE</permission>
+		<permission>READ</permission>
+		<permission>READ_CONTENT</permission>
+		<permission>UPDATE</permission>
+		<permission>UPDATE_CONTENT</permission>
+		<permission>DELETE</permission>
+		<grant>ALLOW</grant>
+	</entries>
+</AccessControlList>

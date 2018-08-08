@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Document category="DOCUMENT" name="DocumentDemoGEC.pdf" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/file" xmlns:ns3="http://flower.com/docs/domain/document" xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns20="http://flower.com/docs/domain/documentclass" xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns8="http://flower.com/docs/domain/taskclass" xmlns:ns7="http://flower.com/docs/domain/i18n" xmlns:ns13="http://flower.com/docs/domain/folder" xmlns:ns9="http://flower.com/docs/domain/reservation" xmlns:ns12="http://flower.com/docs/domain/virtualFolder" xmlns:ns11="http://flower.com/docs/domain/scope" xmlns:ns22="http://flower.com/docs/domain/security" xmlns:ns10="http://flower.com/docs/domain/task" xmlns:ns21="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns17="http://flower.com/docs/domain/componentclass" xmlns:ns16="http://flower.com/docs/domain/fact" xmlns:ns15="http://flower.com/docs/domain/workflow" xmlns:ns14="http://flower.com/docs/domain/report" xmlns:ns19="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/tagclass">
+    <id>cf657330-15ff-4959-804b-7d50c10fac74</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2017-10-11 14:44:40.065 +0200</creationDate>
+        <lastUpdateDate>2017-10-11 14:44:40.065 +0200</lastUpdateDate>
+        <ACL>acl-courrier-entrant</ACL>
+        <ns2:classId>CourrierEntrant</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="CanalEntree" readOnly="false">
+            <ns2:value>4</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="PrenomClient" readOnly="false">
+            <ns2:value>Jules</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="DateCourrier" readOnly="false">
+            <ns2:value>1507725829546</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="RefClient" readOnly="false">
+            <ns2:value>123654</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="NomClient" readOnly="false">
+            <ns2:value>GABIN</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="ObjetCourrier" readOnly="false">
+            <ns2:value>Fin du contrat d'assurance scolaire</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="TypeCourrier" readOnly="false">
+            <ns2:value>Resiliation</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Annotations" readOnly="false"/>
+    </ns2:Tags>
+    <ns3:files size="0">
+        <id>06056aaf-8fd0-43fd-918a-fabdafd501f2</id>
+    </ns3:files>
+</ns3:Document>

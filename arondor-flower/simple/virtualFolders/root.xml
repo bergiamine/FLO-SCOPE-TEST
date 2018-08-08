@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<virtualfolder:VirtualFolder category="VIRTUAL_FOLDER" name="Boîtes aux lettres" xmlns:vfclass="http://flower.com/docs/domain/virtualfolderclass"
+	xmlns:comp="http://flower.com/docs/domain/component" xmlns:scope="http://flower.com/docs/domain/scope" xmlns:acl="http://flower.com/docs/domain/acl"
+	xmlns:common="http://flower.com/docs/domain/common" xmlns:dclass="http://flower.com/docs/domain/documentclass" xmlns:fclass="http://flower.com/docs/domain/folderclass"
+	xmlns:tclass="http://flower.com/docs/domain/tagclass" xmlns:folder="http://flower.com/docs/domain/folder" xmlns:search="http://flower.com/docs/domain/search"
+	xmlns:file="http://flower.com/docs/domain/file" xmlns:doc="http://flower.com/docs/domain/document" xmlns:i18n="http://flower.com/docs/domain/i18n"
+	xmlns:virtualfolder="http://flower.com/docs/domain/virtualFolder" xmlns:exc="http://flower.com/docs/domain/exception">
+
+	<common:id>root</common:id>
+
+	<comp:data>
+		<common:owner>fadmin</common:owner>
+		<common:creationDate>2015-07-26 22:13:06.796 +0200</common:creationDate>
+		<comp:classId>Corbeilles</comp:classId>
+		<common:ACL>c5c35788-c6af-472f-8ca7-6c20f48e0453</common:ACL>
+	</comp:data>
+
+	<virtualfolder:children>184a206e-2c26-41b9-ba82-c3a1d5a63aeb</virtualfolder:children>
+	<virtualfolder:children>284a206e-2c26-41b9-ba82-c3a1d5a63aeb</virtualfolder:children>
+
+</virtualfolder:VirtualFolder>

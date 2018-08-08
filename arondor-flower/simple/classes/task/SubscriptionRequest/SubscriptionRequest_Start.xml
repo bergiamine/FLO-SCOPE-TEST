@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:TaskClass category="TASK" active="true" xmlns:ns16="http://flower.com/docs/domain/folder" xmlns="http://flower.com/docs/domain/common"
+	xmlns:ns17="http://flower.com/docs/domain/documentclass" xmlns:ns14="http://flo	wer.com/docs/domain/virtualFolder" xmlns:ns15="http://flower.com/docs/domain/document"
+	xmlns:ns18="http://flower.com/docs/domain/folderclass" xmlns:ns19="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns9="http://flower.com/docs/domain/reservation"
+	xmlns:ns5="http://flower.com/docs/domain/acl" xmlns:ns12="http://flower.com/docs/domain/component" xmlns:ns13="http://flower.com/docs/domain/task"
+	xmlns:ns6="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/scope" xmlns:ns10="http://flower.com/docs/domain/report"
+	xmlns:ns20="http://flower.com/docs/domain/tagclass" xmlns:ns8="http://flower.com/docs/domain/file" xmlns:ns11="http://flower.com/docs/domain/security"
+	xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/taskclass" xmlns:ns3="http://flower.com/docs/domain/i18n">
+	<id>SubscriptionRequest_Start</id>
+	<ns2:data>
+		<creationDate>2015-08-11 14:45:22.955 +0200</creationDate>
+		<ACL>7f870a1d-c001-4516-a9ce-8872b858bae9</ACL>
+	</ns2:data>
+
+	<ns2:displayNames language="EN">
+		<ns3:value>Subscription request</ns3:value>
+	</ns2:displayNames>
+	<ns2:displayNames language="FR">
+		<ns3:value>Demande d'adhésion</ns3:value>
+	</ns2:displayNames>
+
+	<ns4:icon>flower-button envelope fa-user-plus</ns4:icon>
+	<ns4:workflow>SubscriptionRequest</ns4:workflow>
+
+	<ns2:descriptions language="EN">
+		<ns3:value>Proceed with your subscription form. Your request will be forwarded to the appropriate department</ns3:value>
+	</ns2:descriptions>
+	<ns2:descriptions language="FR">
+		<ns3:value>Remplissez votre demande d'adhésion. Votre demande sera transmise au service approprié</ns3:value>
+	</ns2:descriptions>
+
+	<ns2:tagReferences tagName="ServiceName" mandatory="true" order="0" />
+	<ns2:tagReferences tagName="Matricule" mandatory="true" order="0">
+		<ns20:descriptions language="EN">
+			<ns3:value>PXXXX - Enter the id of new adherent</ns3:value>
+		</ns20:descriptions>
+		<ns20:descriptions language="FR">
+			<ns3:value>PXXXX - Identifiant du nouvel adhérent</ns3:value>
+		</ns20:descriptions>
+	</ns2:tagReferences>
+	
+	<ns2:tagCategories>envelope</ns2:tagCategories>
+
+	<ns4:children category="DOCUMENT" required="NOW">
+		<id>Attachment1</id>
+		<ns4:classId>EnvelopeAttachment</ns4:classId>
+		<ns4:displayNames language="EN">
+			<ns3:value>Subscription form</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="FR">
+			<ns3:value>Bulletin d'adhésion</ns3:value>
+		</ns4:displayNames>
+		<ns5:Tags>
+			<ns5:tags name="Comments" readOnly="false">
+				<ns5:value>Insérer votre commentaire</ns5:value>
+			</ns5:tags>
+		</ns5:Tags>
+		<ns4:description>Un bulletin d'adhésion doit impérativement être fourni</ns4:description>
+	</ns4:children>
+
+	<ns4:children category="DOCUMENT" required="LATER">
+		<id>Attachment2</id>
+		<ns4:classId>EnvelopeAttachment</ns4:classId>
+		<ns4:displayNames language="EN">
+			<ns3:value>SEPA</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="FR">
+			<ns3:value>Mandat SEPA</ns3:value>
+		</ns4:displayNames>
+		<ns4:description>Un mandat SEPA peut être fourni en avance</ns4:description>
+	</ns4:children>
+
+	<ns4:answers xsi:type="ns4:ReasonedAnswerDefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<id>Initiate</id>
+		<ns4:displayNames language="EN">
+			<ns3:value>Send</ns3:value>
+		</ns4:displayNames>
+		<ns4:displayNames language="FR">
+			<ns3:value>Envoyer</ns3:value>
+		</ns4:displayNames>
+		<ns4:reasons tagName="Comments" order="0" mandatory="true" />
+	</ns4:answers>
+
+</ns4:TaskClass>

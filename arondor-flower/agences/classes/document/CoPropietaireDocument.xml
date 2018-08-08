@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:DocumentClass category="DOCUMENT" active="false" xmlns:ns16="http://flower.com/docs/domain/document" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/folder" xmlns:ns14="http://flower.com/docs/domain/task" xmlns:ns15="http://flower.com/docs/domain/virtualFolder" xmlns:ns18="http://flower.com/docs/domain/tagclass" xmlns:ns19="http://flower.com/docs/domain/folderclass" xmlns:ns9="http://flower.com/docs/domain/file" xmlns:ns5="http://flower.com/docs/domain/component" xmlns:ns12="http://flower.com/docs/domain/report" xmlns:ns13="http://flower.com/docs/domain/security" xmlns:ns6="http://flower.com/docs/domain/acl" xmlns:ns7="http://flower.com/docs/domain/search" xmlns:ns10="http://flower.com/docs/domain/taskclass" xmlns:ns20="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns8="http://flower.com/docs/domain/scope" xmlns:ns11="http://flower.com/docs/domain/reservation" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/documentclass" xmlns:ns3="http://flower.com/docs/domain/i18n">
+    <id>CoPropietaireDocument</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2004-09-22 17:31:30.163 +0200</creationDate>
+        <lastUpdateDate>2016-01-29 03:18:24.100 +0100</lastUpdateDate>
+        <ACL>a1058d46-321b-4896-9ab8-ab0a466f7fda</ACL>
+    </ns2:data>
+    <ns2:tagReferences tagName="AgencyRef" mandatory="false" multivalued="false" technical="true" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="Activity" mandatory="false" multivalued="false" technical="true" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="BuildingRef" mandatory="false" multivalued="false" technical="true" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="ReceivedDate" mandatory="false" multivalued="false" technical="true" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="CustomerId" mandatory="false" multivalued="false" technical="false" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="Annotations" multivalued="true" technical="true"  />
+    <ns2:displayNames language="EN">
+        <ns3:value>Co-owner document</ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="FR">
+        <ns3:value>Document copropriétaire</ns3:value>
+    </ns2:displayNames>
+    <ns2:RetentionDuration>
+        <value>0</value>
+        <unit>MONTH</unit>
+    </ns2:RetentionDuration>
+</ns4:DocumentClass>

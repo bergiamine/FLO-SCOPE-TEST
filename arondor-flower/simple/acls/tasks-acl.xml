@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AccessControlList name="Sécurité par défaut des tâches" xmlns="http://flower.com/docs/domain/acl" xmlns:common="http://flower.com/docs/domain/common">
+	<common:id>792693b1-0385-4960-8f85-69ae83fb7a22</common:id>
+	<entries>
+		<principal>Board</principal>
+		<permission>CREATE</permission>
+		<permission>READ</permission>
+		<permission>UPDATE</permission>
+		<permission>READ_CONTENT</permission>
+		<permission>READ_HISTORY</permission>
+		<grant>ALLOW</grant>
+	</entries>
+	<entries>
+		<principal>Employees</principal>
+		<permission>READ</permission>
+		<permission>UPDATE</permission>
+		<grant>ALLOW</grant>
+	</entries>
+</AccessControlList>

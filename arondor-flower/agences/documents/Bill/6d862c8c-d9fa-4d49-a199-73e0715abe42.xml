@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Document category="DOCUMENT" name="Facture 10 " xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/task" xmlns:ns19="http://flower.com/docs/domain/virtualFolder" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/componentclass" xmlns:ns6="http://flower.com/docs/domain/scope" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/folder" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/document">
+    <id>6d862c8c-d9fa-4d49-a199-73e0715abe42</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2015-11-19 09:10:57.444 +0100</creationDate>
+        <lastUpdateDate>2016-02-09 21:10:16.522 +0100</lastUpdateDate>
+        <retentionStartDate>2000-12-12 12:35:57.448 +0100</retentionStartDate>
+        <validityCode>INVALID</validityCode>
+        <ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ACL>
+        <ns2:classId>Bill</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="Provider" readOnly="false">
+            <ns2:value>DIESEL Gabon</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="BillId" readOnly="false">
+            <ns2:value>PVPV209173</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Year" readOnly="false">
+            <ns2:value>2015</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Family" readOnly="false">
+            <ns2:value>Facture</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="Month" readOnly="false">
+            <ns2:value>Décembre</ns2:value>
+        </ns2:tags>
+        <ns2:tags name="AgencyRef" readOnly="false">
+            <ns2:value>A</ns2:value>
+        </ns2:tags>
+    </ns2:Tags>
+    <ns3:files>e3e883d5-fc95-44de-852c-86b79aea1090</ns3:files>
+</ns3:Document>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Document category="DOCUMENT" name="Envoie d'un mail de 5Mo" xmlns:ns16="http://flower.com/docs/domain/virtualfolderclass" xmlns="http://flower.com/docs/domain/common" xmlns:ns17="http://flower.com/docs/domain/tagclass" xmlns:ns14="http://flower.com/docs/domain/documentclass" xmlns:ns15="http://flower.com/docs/domain/folderclass" xmlns:ns18="http://flower.com/docs/domain/task" xmlns:ns19="http://flower.com/docs/domain/virtualFolder" xmlns:ns9="http://flower.com/docs/domain/taskclass" xmlns:ns5="http://flower.com/docs/domain/search" xmlns:ns12="http://flower.com/docs/domain/security" xmlns:ns13="http://flower.com/docs/domain/componentclass" xmlns:ns6="http://flower.com/docs/domain/scope" xmlns:ns7="http://flower.com/docs/domain/file" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns20="http://flower.com/docs/domain/folder" xmlns:ns8="http://flower.com/docs/domain/i18n" xmlns:ns11="http://flower.com/docs/domain/report" xmlns:ns2="http://flower.com/docs/domain/component" xmlns:ns4="http://flower.com/docs/domain/acl" xmlns:ns3="http://flower.com/docs/domain/document">
+    <id>bae14bb7-8e8d-4e0b-ba5a-d957351c8118</id>
+    <ns2:data>
+        <owner>kta</owner>
+        <creationDate>2016-01-29 10:30:12.026 +0100</creationDate>
+        <lastUpdateDate>2016-02-09 21:01:22.603 +0100</lastUpdateDate>
+        <ACL>4a3682a6-48f7-40e7-8990-54634e0aa42e</ACL>
+        <ns2:classId>Correspondance</ns2:classId>
+        <ns2:status>NEW</ns2:status>
+    </ns2:data>
+    <ns2:Tags>
+        <ns2:tags name="Activity" readOnly="false"/>
+        <ns2:tags name="CustomerId" readOnly="false"/>
+        <ns2:tags name="BuildingRef" readOnly="false"/>
+        <ns2:tags name="AgencyRef" readOnly="false"/>
+    </ns2:Tags>
+    <ns3:files>5bee196c-5d41-4bb1-8d40-6de58a2ec7a3</ns3:files>
+</ns3:Document>

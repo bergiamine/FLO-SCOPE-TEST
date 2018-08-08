@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:TaskClass category="TASK" active="false" technical="false" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/tagclass" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns6="http://flower.com/docs/domain/component" xmlns:ns20="http://flower.com/docs/domain/virtualFolder" xmlns:ns5="http://flower.com/docs/domain/taskclass" xmlns:ns8="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/acl" xmlns:ns13="http://flower.com/docs/domain/report" xmlns:ns9="http://flower.com/docs/domain/file" xmlns:ns12="http://flower.com/docs/domain/workflow" xmlns:ns11="http://flower.com/docs/domain/scope" xmlns:ns22="http://flower.com/docs/domain/fact" xmlns:ns10="http://flower.com/docs/domain/reservation" xmlns:ns21="http://flower.com/docs/domain/task" xmlns:ns17="http://flower.com/docs/domain/documentclass" xmlns:ns16="http://flower.com/docs/domain/folderclass" xmlns:ns15="http://flower.com/docs/domain/security" xmlns:ns14="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns19="http://flower.com/docs/domain/folder" xmlns:ns18="http://flower.com/docs/domain/document">
+    <id>GEC_Copie</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2017-10-07 19:13:44.619 +0200</creationDate>
+        <lastUpdateDate>2017-10-07 19:20:10.190 +0200</lastUpdateDate>
+        <ACL>acl-copie</ACL>
+    </ns2:data>
+    <ns2:tagReferences tagName="ServiceDestinataire" mandatory="true" multivalued="false" technical="false" readonly="false" order="0"/>
+    <ns2:tagReferences tagName="Commentaire" mandatory="false" multivalued="false" technical="false" readonly="false" order="1">
+        <ns4:descriptions language="EN">
+            <ns3:value>Fill your comment</ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value>Saisissez un commentaire</ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+    <ns2:displayNames language="EN">
+        <ns3:value>Copy</ns3:value>
+    </ns2:displayNames>
+    <ns2:displayNames language="FR">
+        <ns3:value>Copie de courrier</ns3:value>
+    </ns2:displayNames>
+    <ns2:descriptions language="EN">
+        <ns3:value>Copy incomming mail in order to be treat by another service</ns3:value>
+    </ns2:descriptions>
+    <ns2:descriptions language="FR">
+        <ns3:value>Copier un courrier pour qu'il puisse être traité par un autre service</ns3:value>
+    </ns2:descriptions>
+    <ns2:RetentionDuration>
+        <value>0</value>
+        <unit>MONTH</unit>
+    </ns2:RetentionDuration>
+    <ns5:icon>fa-clone</ns5:icon>
+    <ns5:children required="NOW" technical="true" category="TASK">
+        <id>Attachment-1518578561</id>
+        <ns5:classId>GEC_Step2_ATraiter</ns5:classId>
+        <ns5:displayNames language="EN"/>
+        <ns5:displayNames language="FR"/>
+        <ns6:Tags/>
+        <ns5:synopsis language="EN">
+            <ns3:value></ns3:value>
+        </ns5:synopsis>
+        <ns5:synopsis language="FR">
+            <ns3:value></ns3:value>
+        </ns5:synopsis>
+    </ns5:children>
+    <ns5:answers>
+        <id>Initiate</id>
+        <ns5:displayNames language="EN">
+            <ns3:value>Copy</ns3:value>
+        </ns5:displayNames>
+        <ns5:displayNames language="FR">
+            <ns3:value>Copier</ns3:value>
+        </ns5:displayNames>
+        <ns5:confirmationMessages language="EN">
+            <ns3:value></ns3:value>
+        </ns5:confirmationMessages>
+        <ns5:confirmationMessages language="FR">
+            <ns3:value></ns3:value>
+        </ns5:confirmationMessages>
+    </ns5:answers>
+    <ns5:workflow>Copie</ns5:workflow>
+</ns5:TaskClass>

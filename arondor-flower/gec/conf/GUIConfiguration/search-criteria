@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd    
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="DirectionCriterion"
+		class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="DirectionDestinataire" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="ServiceCriterion"
+		class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="ServiceDestinataire" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+		<bean id="NomAdherentCriterion"
+		class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="NomClient" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+		<bean id="RefClientCriterion"
+		class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="RefClient" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="TypeCriterion"
+		class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="TypeCourrier" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">EQUALS_TO</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="ObjetCriterion"
+		class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="ObjetCourrier" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">STRING</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">CONTAINS</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="DateCriterion"
+		class="com.flower.docs.gui.client.search.criterion.SimpleCriterionPresenter">
+		<property name="model">
+			<bean class="com.flower.docs.domain.search.Criterion">
+				<property name="name" value="DateCourrier" />
+				<property name="type">
+					<value type="com.flower.docs.domain.search.Types">TIMESTAMP</value>
+				</property>
+				<property name="operator">
+					<value type="com.flower.docs.domain.search.Operators">BETWEEN</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>

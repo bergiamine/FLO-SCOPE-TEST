@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TagClass xmlns:ns2="http://flower.com/docs/domain/common" xmlns="http://flower.com/docs/domain/tagclass" xmlns:ns4="http://flower.com/docs/domain/i18n"
+	xmlns:ns3="http://flower.com/docs/domain/acl" xmlns:ns5="http://flower.com/docs/domain/component">
+	<ns2:id>AuthorizedAccess</ns2:id>
+
+	<data>
+		<ns2:owner>fadmin</ns2:owner>
+		<ns2:creationDate>2015-11-18 17:54:36.199 +0200</ns2:creationDate>
+	</data>
+
+	<type>CHOICELIST</type>
+
+	<displayNames language="EN">
+		<ns4:value>Access authorized</ns4:value>
+	</displayNames>
+	<displayNames language="FR">
+		<ns4:value>Accès autorisés</ns4:value>
+	</displayNames>
+
+	<allowedValues symbolicName="batimentA">
+		<displayNames language="FR">
+			<ns4:value>Batiment A</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Building A</ns4:value>
+		</displayNames>
+	</allowedValues>
+	<allowedValues symbolicName="batimentB">
+		<displayNames language="FR">
+			<ns4:value>Batiment B</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Building B</ns4:value>
+		</displayNames>
+	</allowedValues>
+		<allowedValues symbolicName="Parking">
+		<displayNames language="FR">
+			<ns4:value>Parking</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Parking</ns4:value>
+		</displayNames>
+	</allowedValues>
+		<allowedValues symbolicName="Archives">
+		<displayNames language="FR">
+			<ns4:value>Archives</ns4:value>
+		</displayNames>
+		<displayNames language="EN">
+			<ns4:value>Archives</ns4:value>
+		</displayNames>
+	</allowedValues>
+	
+	<searchable>false</searchable>
+
+</TagClass>

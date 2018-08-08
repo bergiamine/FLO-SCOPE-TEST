@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:DocumentClass category="DOCUMENT" active="false" technical="true" xmlns="http://flower.com/docs/domain/common" xmlns:ns2="http://flower.com/docs/domain/componentclass" xmlns:ns4="http://flower.com/docs/domain/tagclass" xmlns:ns3="http://flower.com/docs/domain/i18n" xmlns:ns6="http://flower.com/docs/domain/component" xmlns:ns20="http://flower.com/docs/domain/security" xmlns:ns5="http://flower.com/docs/domain/documentclass" xmlns:ns8="http://flower.com/docs/domain/search" xmlns:ns7="http://flower.com/docs/domain/acl" xmlns:ns13="http://flower.com/docs/domain/scope" xmlns:ns9="http://flower.com/docs/domain/file" xmlns:ns12="http://flower.com/docs/domain/reservation" xmlns:ns11="http://flower.com/docs/domain/task" xmlns:ns22="http://flower.com/docs/domain/folderclass" xmlns:ns10="http://flower.com/docs/domain/taskclass" xmlns:ns21="http://flower.com/docs/domain/virtualfolderclass" xmlns:ns17="http://flower.com/docs/domain/folder" xmlns:ns16="http://flower.com/docs/domain/document" xmlns:ns15="http://flower.com/docs/domain/report" xmlns:ns14="http://flower.com/docs/domain/workflow" xmlns:ns19="http://flower.com/docs/domain/fact" xmlns:ns18="http://flower.com/docs/domain/virtualFolder">
+    <id>Annotation</id>
+    <ns2:data>
+        <owner>fadmin</owner>
+        <creationDate>2017-05-17 12:27:29.309 +0200</creationDate>
+        <lastUpdateDate>2017-06-06 19:28:23.591 +0200</lastUpdateDate>
+        <ACL>annotations-acl</ACL>
+    </ns2:data>
+    <ns2:tagReferences tagName="ComponentLink" mandatory="true" multivalued="false" technical="false" readonly="false" order="0">
+        <ns4:descriptions language="EN">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:descriptions language="FR">
+            <ns3:value></ns3:value>
+        </ns4:descriptions>
+        <ns4:pattern></ns4:pattern>
+    </ns2:tagReferences>
+</ns5:DocumentClass>
